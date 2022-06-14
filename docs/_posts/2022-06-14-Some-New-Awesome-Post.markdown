@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "SOME NEW POST"
-date: 2022-06-14 15:44:30 -0000
-categories: Machine-Learning Deep-Learning
+date: 2022-06-14 15:44:30 +0200
+categories: ML DL
 ---
 
 Some new awesome post with code snippet
