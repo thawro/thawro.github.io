@@ -1,16 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from "react-router-dom";
+import {
+  About, Contact, Experience, Feedbacks,
+  Hero, Navbar, Tech, Works, StarsCanvas
+} from './components'
 
-function App() {
+
+{/* <gradio-app src="https://thawro-flowers-102-classification.hf.space"></gradio-app> */ }
+const App = () => {
+
   return (
-    <div className="App">
-      <iframe
-        src="https://thawro-flowers-classification.hf.space"
-        frameborder="0"
-        width="1400"
-        height="700"
-      ></iframe>
-    </div>
+    <BrowserRouter>
+      <div className="relative z-0 bg-primary">
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+          <Navbar />
+          <Hero />
+        </div>
+        <About />
+        <Experience />
+        <Tech />
+        <Works />
+        <Feedbacks />
+        <div className="relative z-0">
+          <Contact />
+          <StarsCanvas />
+        </div>
+      </div>
+    </BrowserRouter>
+
   );
 }
 
