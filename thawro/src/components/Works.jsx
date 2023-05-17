@@ -6,7 +6,7 @@ import { SectionWrapper } from '../hoc'
 import { projects } from '../constants'
 import { fadeIn, textVariant } from '../utils/motion'
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, huggingface_url, source_code_link }) => {
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -21,9 +21,10 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         <div className='relative w-full h-[230px]'>
           <img
             src={image}
-            alt={name}
+            alt={image}
             className='w-full h-full object-cover rounded-2xl'
           />
+          {/* <gradio-app src="https://thawro-flowers-102-classification.hf.space"></gradio-app> */}
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div

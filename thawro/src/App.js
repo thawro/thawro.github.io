@@ -1,11 +1,10 @@
 import { BrowserRouter } from "react-router-dom";
 import {
   About, Contact, Experience, Feedbacks,
-  Hero, Navbar, Tech, Works, StarsCanvas
+  Hero, Navbar, Tech, Works, StarsCanvas, Footer
 } from './components'
 
 
-{/* <gradio-app src="https://thawro-flowers-102-classification.hf.space"></gradio-app> */ }
 const App = () => {
 
   return (
@@ -24,6 +23,7 @@ const App = () => {
           <Contact />
           <StarsCanvas />
         </div>
+        <Footer />
       </div>
     </BrowserRouter>
 

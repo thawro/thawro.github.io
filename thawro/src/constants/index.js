@@ -1,28 +1,22 @@
 import {
-    mobile,
-    backend,
-    creator,
-    web,
-    javascript,
-    typescript,
-    html,
-    css,
-    reactjs,
-    redux,
-    tailwind,
-    nodejs,
-    mongodb,
+    ml_engineer,
+    python_developer,
+    data_scientist,
+    researcher,
+    pytorch,
+    lightning,
+    python,
+    numpy,
+    plotly,
+    mlflow,
+    wandb,
+    seaborn,
+    matplotlib,
     git,
-    figma,
     docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
-    threejs,
+    bonasoft,
+    mxlabs,
+    flowers_classification,
 } from "../assets";
 
 export const navLinks = [
@@ -42,129 +36,94 @@ export const navLinks = [
 
 const services = [
     {
-        title: "Web Developer",
-        icon: web,
+        title: "Python Developer",
+        icon: python_developer,
     },
     {
-        title: "React Native Developer",
-        icon: mobile,
+        title: "ML Engineer",
+        icon: ml_engineer,
     },
     {
-        title: "Backend Developer",
-        icon: backend,
+        title: "Data Scientist",
+        icon: data_scientist,
     },
     {
-        title: "Content Creator",
-        icon: creator,
+        title: "Researcher",
+        icon: researcher,
     },
 ];
 
 const technologies = [
     {
-        name: "HTML 5",
-        icon: html,
+        name: "Python",
+        icon: python,
     },
     {
-        name: "CSS 3",
-        icon: css,
+        name: "PyTorch",
+        icon: pytorch,
     },
     {
-        name: "JavaScript",
-        icon: javascript,
+        name: "PyTorch Lightning",
+        icon: lightning,
     },
     {
-        name: "TypeScript",
-        icon: typescript,
-    },
-    {
-        name: "React JS",
-        icon: reactjs,
-    },
-    {
-        name: "Redux Toolkit",
-        icon: redux,
-    },
-    {
-        name: "Tailwind CSS",
-        icon: tailwind,
-    },
-    {
-        name: "Node JS",
-        icon: nodejs,
-    },
-    {
-        name: "MongoDB",
-        icon: mongodb,
-    },
-    {
-        name: "Three JS",
-        icon: threejs,
+        name: "NumPy",
+        icon: numpy,
     },
     {
         name: "git",
         icon: git,
     },
     {
-        name: "figma",
-        icon: figma,
-    },
-    {
         name: "docker",
         icon: docker,
     },
+    {
+        name: "Weights and Biases",
+        icon: wandb,
+    },
+    {
+        name: "plotly",
+        icon: plotly,
+    },
+    {
+        name: "mlflow",
+        icon: mlflow,
+    },
+    {
+        name: "seaborn",
+        icon: seaborn,
+    },
+    {
+        name: "matplotlib",
+        icon: matplotlib,
+    },
+
 ];
 
 const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#383E56",
-        date: "March 2020 - April 2021",
+        title: "Python Developer",
+        company_name: "Bonasoft",
+        icon: bonasoft,
+        iconBg: "#aa1326",
+        date: "March 2021 - July 2021",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "1",
+            "2",
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
-        iconBg: "#E6DEDD",
-        date: "Jan 2021 - Feb 2022",
+        title: "Machine Learning Engineer",
+        company_name: "MX Labs",
+        icon: mxlabs,
+        iconBg: "#ffffff",
+        date: "July 2021 - July 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#383E56",
-        date: "Jan 2022 - Jan 2023",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#E6DEDD",
-        date: "Jan 2023 - Present",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "1",
+            "2",
+            "3",
+            "4",
         ],
     },
 ];
@@ -172,94 +131,114 @@ const experiences = [
 const testimonials = [
     {
         testimonial:
-            "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-        name: "Sara Lee",
-        designation: "CFO",
-        company: "Acme Co",
+            "Some text",
+        name: "Some name",
+        designation: "Some CEO",
+        company: "Some company",
         image: "https://randomuser.me/api/portraits/women/4.jpg",
     },
     {
         testimonial:
-            "I've never met a web developer who truly cares about their clients' success like Rick does.",
-        name: "Chris Brown",
-        designation: "COO",
-        company: "DEF Corp",
-        image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-        testimonial:
-            "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-        name: "Lisa Wang",
-        designation: "CTO",
-        company: "456 Enterprises",
-        image: "https://randomuser.me/api/portraits/women/6.jpg",
+            "Some text",
+        name: "Some name",
+        designation: "Some CEO",
+        company: "Some company",
+        image: "https://randomuser.me/api/portraits/women/4.jpg",
     },
 ];
 
 const projects = [
     {
-        name: "Car Rent",
+        name: "Flowers classification",
         description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+            "Classification of 102 flower species using CNN.",
         tags: [
             {
-                name: "react",
+                name: "DL",
                 color: "blue-text-gradient",
             },
             {
-                name: "mongodb",
+                name: "classification",
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
+                name: "image",
                 color: "pink-text-gradient",
             },
         ],
-        image: carrent,
-        source_code_link: "https://github.com/",
+        image: flowers_classification,
+        huggingface_url: "https://huggingface.co/spaces/thawro/flowers-102-classification",
+        source_code_link: "https://github.com/thawro/flowers-102-classification",
     },
     {
-        name: "Job IT",
+        name: "Flowers classification",
         description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+            "Classification of 102 flower species using CNN.",
         tags: [
             {
-                name: "react",
+                name: "DL",
                 color: "blue-text-gradient",
             },
             {
-                name: "restapi",
+                name: "classification",
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "image",
                 color: "pink-text-gradient",
             },
         ],
-        image: jobit,
-        source_code_link: "https://github.com/",
+        image: flowers_classification,
+        huggingface_url: "https://huggingface.co/spaces/thawro/flowers-102-classification",
+        source_code_link: "https://github.com/thawro/flowers-102-classification",
     },
     {
-        name: "Trip Guide",
+        name: "Flowers classification",
         description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+            "Classification of 102 flower species using CNN.",
         tags: [
             {
-                name: "nextjs",
+                name: "DL",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "classification",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "image",
                 color: "pink-text-gradient",
             },
         ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
+        image: flowers_classification,
+        huggingface_url: "https://huggingface.co/spaces/thawro/flowers-102-classification",
+        source_code_link: "https://github.com/thawro/flowers-102-classification",
     },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const flaticon_refs = [
+    {
+        href: "https://www.flaticon.com/free-icons/brain",
+        title: "brain icons",
+        text: "Brain icons created by anilofex - Flaticon"
+    },
+    {
+        href: "https://www.flaticon.com/free-icons/data-science",
+        title: "data science icons",
+        text: "Data science icons created by Eucalyp - Flaticon"
+    },
+
+    {
+        href: "https://www.flaticon.com/free-icons/data-analytics",
+        title: "data analytics icons",
+        text: "Data analytics icons created by Triangle Squad - Flaticon"
+    },
+    {
+        href: "https://www.flaticon.com/free-icons/integrated-development-environment",
+        title: "integrated development environment icons",
+        text: "Integrated development environment icons created by Dewi Sari - Flaticon"
+    },
+]
+
+
+export { services, technologies, experiences, testimonials, projects, flaticon_refs };
