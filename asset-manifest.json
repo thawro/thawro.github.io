@@ -1,29 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.bb9358f5.css",
-    "main.js": "/static/js/main.906f34dd.js",
+    "main.css": "/static/css/main.43ccbb2d.css",
+    "main.js": "/static/js/main.dc820e96.js",
     "static/js/787.3939298d.chunk.js": "/static/js/787.3939298d.chunk.js",
-    "static/media/tripguide.png": "/static/media/tripguide.991986c795ea140ba063.png",
     "static/media/herobg.png": "/static/media/herobg.ad33add2430e34307c33.png",
-    "static/media/carrent.png": "/static/media/carrent.6b1e855ede285c40b77f.png",
-    "static/media/jobit.png": "/static/media/jobit.755da7149642fd049273.png",
-    "static/media/web.png": "/static/media/web.c0cb2cc13791a26822d3.png",
-    "static/media/backend.png": "/static/media/backend.08c8d93b8142c41a9e63.png",
-    "static/media/mobile.png": "/static/media/mobile.15e7b89f1018dcdba6e7.png",
-    "static/media/creator.png": "/static/media/creator.f8923ce18390029928ac.png",
-    "static/media/starbucks.png": "/static/media/starbucks.c086db5b166ea2f14de1.png",
+    "static/media/flowers_classification.png": "/static/media/flowers_classification.6b7eefbcb580021cb719.png",
+    "static/media/researcher.png": "/static/media/researcher.5ffd500693bc232c339d.png",
+    "static/media/ml_engineer.png": "/static/media/ml_engineer.d389c5c32dee0d66cdd0.png",
+    "static/media/data_scientist.png": "/static/media/data_scientist.63825ea47757d61fd491.png",
+    "static/media/matplotlib.png": "/static/media/matplotlib.4535ae00a38134b505b8.png",
+    "static/media/seaborn.png": "/static/media/seaborn.4cd22abdc85b593a8ccb.png",
+    "static/media/python_developer.png": "/static/media/python_developer.ac6e4740766b8f0e14cc.png",
+    "static/media/mlflow.png": "/static/media/mlflow.f939bdde8184a585b4d4.png",
+    "static/media/bonasoft.png": "/static/media/bonasoft.ffef4b2782307c34f9fa.png",
+    "static/media/python.png": "/static/media/python.02179dfb4cb3a629d83b.png",
     "static/media/github.png": "/static/media/github.ed1c06d925fff0b57e32.png",
-    "static/media/logo.svg": "/static/media/logo.55ac93d127ce315b29dc8c7a742875dc.svg",
+    "static/media/logo.svg": "/static/media/logo.23a7a1b2163aabd31e2c151b47d3249c.svg",
     "static/media/close.svg": "/static/media/close.52ab0d39b2c514b8322115c951eac5a2.svg",
     "static/media/menu.svg": "/static/media/menu.acf64a387fc724c7a47a3a0120d5dc52.svg",
     "index.html": "/index.html",
-    "static/media/threejs.svg": "/static/media/threejs.34d1dab4caddf9c51437e9bafd282582.svg",
-    "main.bb9358f5.css.map": "/static/css/main.bb9358f5.css.map",
-    "main.906f34dd.js.map": "/static/js/main.906f34dd.js.map",
+    "main.43ccbb2d.css.map": "/static/css/main.43ccbb2d.css.map",
+    "main.dc820e96.js.map": "/static/js/main.dc820e96.js.map",
     "787.3939298d.chunk.js.map": "/static/js/787.3939298d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb9358f5.css",
-    "static/js/main.906f34dd.js"
+    "static/css/main.43ccbb2d.css",
+    "static/js/main.dc820e96.js"
   ]
 }
