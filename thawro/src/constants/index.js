@@ -18,6 +18,9 @@ import {
     bonasoft,
     mxlabs,
     flowers_classification,
+    hf_spaces,
+    github,
+
 } from "../assets";
 
 export const navLinks = [
@@ -157,6 +160,7 @@ const projects = [
         name: "Flowers classification",
         description:
             "Classification of 102 flower species using CNN.",
+        image: flowers_classification,
         tags: [
             {
                 name: "DL",
@@ -171,14 +175,22 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: flowers_classification,
-        huggingface_url: "https://huggingface.co/spaces/thawro/flowers-102-classification",
-        source_code_link: "https://github.com/thawro/flowers-102-classification",
+        urls: [
+            {
+                icon: hf_spaces,
+                url: "https://huggingface.co/spaces/thawro/flowers-102-classification"
+            },
+            {
+                icon: github,
+                url: "https://github.com/thawro/flowers-102-classification"
+            }
+        ]
     },
     {
         name: "Flowers classification",
         description:
             "Classification of 102 flower species using CNN.",
+        image: flowers_classification,
         tags: [
             {
                 name: "DL",
@@ -193,14 +205,22 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: flowers_classification,
-        huggingface_url: "https://huggingface.co/spaces/thawro/flowers-102-classification",
-        source_code_link: "https://github.com/thawro/flowers-102-classification",
+        urls: [
+            {
+                icon: hf_spaces,
+                url: "https://huggingface.co/spaces/thawro/flowers-102-classification"
+            },
+            {
+                icon: github,
+                url: "https://github.com/thawro/flowers-102-classification"
+            }
+        ]
     },
     {
         name: "Flowers classification",
         description:
             "Classification of 102 flower species using CNN.",
+        image: flowers_classification,
         tags: [
             {
                 name: "DL",
@@ -215,9 +235,16 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: flowers_classification,
-        huggingface_url: "https://huggingface.co/spaces/thawro/flowers-102-classification",
-        source_code_link: "https://github.com/thawro/flowers-102-classification",
+        urls: [
+            {
+                icon: hf_spaces,
+                url: "https://huggingface.co/spaces/thawro/flowers-102-classification"
+            },
+            {
+                icon: github,
+                url: "https://github.com/thawro/flowers-102-classification"
+            }
+        ]
     },
 ];
 

@@ -6,6 +6,7 @@ import data_scientist from "./about/data_scientist.png";
 import python_developer from "./about/python_developer.png";
 
 import github from "./github.png";
+import hf_spaces from "./hf_spaces.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -39,6 +40,7 @@ export {
   data_scientist,
   ml_engineer,
   github,
+  hf_spaces,
   menu,
   wandb,
   numpy,

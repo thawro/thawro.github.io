@@ -1,8 +1,6 @@
-import { BallCanvas } from "./canvas"
 import { SectionWrapper } from "../hoc"
 import { technologies } from "../constants"
 import React, { useState } from 'react'
-import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { fadeIn, textVariant } from '../utils/motion'
@@ -14,24 +12,25 @@ const TechBadge = ({ index, name, icon }) => {
 
   return <>
     <div
-      className="xs:w-[250px] w-full h-full flex justify-center items-center "
+      className=" xs:w-[250px] w-full h-full flex justify-center items-center "
     >
       <motion.div
-        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
+        variants={fadeIn("right", "spring", 0.3 * index, 0.3)}
       >
         <div
           onMouseEnter={() => setShowText(true)}
           onMouseLeave={() => setShowText(false)}
+          onClick={() => setShowText(~showText)}
           className="flex justify-center items-center text-center"
         >
           <img
             src={icon}
             alt={name}
-            className={`${showText ? 'blur-[5px] scale-125' : ''} 
-            w-28 h-28 object-contain transition duration-500`}
+            className={`${showText ? 'blur-[5px] scale-[110%]' : ''} 
+            w-32 h-32 object-contain transition duration-500`}
           />
 
-          <span className={`absolute ${showText ? 'opacity-100 scale-125' : 'opacity-0'}  
+          <span className={`absolute cursor-default ${showText ? 'opacity-100 scale-[125%]' : 'opacity-0'}  
               drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]
               transition duration-500 text-white text-[18px] font-bold`}>{name}</span>
         </div>
