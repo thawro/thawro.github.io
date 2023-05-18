@@ -10,6 +10,7 @@ import {
     plotly,
     mlflow,
     wandb,
+    sklearn,
     seaborn,
     matplotlib,
     git,
@@ -63,7 +64,7 @@ const technologies = [
         icon: pytorch,
     },
     {
-        name: "PyTorch Lightning",
+        name: <>PyTorch<br />Lightning</>,
         icon: lightning,
     },
     {
@@ -79,7 +80,7 @@ const technologies = [
         icon: docker,
     },
     {
-        name: "Weights and Biases",
+        name: <>Weights<br />and<br />Biases</>,
         icon: wandb,
     },
     {
@@ -97,6 +98,10 @@ const technologies = [
     {
         name: "matplotlib",
         icon: matplotlib,
+    },
+    {
+        name: "scikit-learn",
+        icon: sklearn,
     },
 
 ];

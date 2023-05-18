@@ -10,6 +10,8 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import python from "./tech/python.png";
+import sklearn from "./tech/sklearn.png";
+
 import docker from "./tech/docker.png";
 import pytorch from "./tech/pytorch.png";
 import git from "./tech/git.png";
@@ -43,6 +45,7 @@ export {
   close,
   python,
   docker,
+  sklearn,
   pytorch,
   git,
   lightning,
