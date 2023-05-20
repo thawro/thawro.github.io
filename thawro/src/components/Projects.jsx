@@ -139,7 +139,7 @@ const ProjectCard = ({ index, project }) => {
     >
 
       <div
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className='cursor-pointer bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
         onClick={(openModal)}
       >
         <div className='relative w-full h-[230px]'>
@@ -158,7 +158,7 @@ const ProjectCard = ({ index, project }) => {
                   e.stopPropagation()
                 }
                 }
-                className='ulsating mr-2 mt-2 bg-tertiary border-2 border-indigo-300/50 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                className='pulsating mr-2 mt-2 bg-tertiary border-2 border-indigo-300/50 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
               >
                 <img
                   src={url.icon}
@@ -215,11 +215,11 @@ const Projects = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Following projects show my skills as ML engineer.
+          The Following projects show my skills as ML engineer.
           Each project is briefly described with links to code
           repositories and live demos in it. It reflects my ability
           to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          and manage projects effectively. Click on the project card to see more.
         </motion.p>
       </div>
       <div className='mt-20 flex flex-wrap gap-7 justify-center'>
