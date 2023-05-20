@@ -15,7 +15,7 @@ const TechBadge = ({ index, name, icon }) => {
       className=" xs:w-[250px] w-full h-full flex justify-center items-center "
     >
       <motion.div
-        variants={fadeIn("right", "spring", 0.3 * index, 0.3)}
+        variants={fadeIn("right", "spring", 0.15 * index, 0.1)}
       >
         <div
           onMouseEnter={() => setShowText(true)}
