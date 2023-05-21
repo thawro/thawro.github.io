@@ -36,7 +36,7 @@ const PopUpWindow = ({ isOpen, onClose, children }) => {
         animation: `${isOpen ? "openPopUpAnimation" : "closePopUpAnimation"} 1s ease forwards`,
         width: '100vw',
         height: '100vh',
-        paddingTop: '3em',
+        // paddingTop: '3em',
         backgroundColor: 'rgba(255, 255, 255, 0.5)',
         zIndex: 9999,
         // display: 'flex',

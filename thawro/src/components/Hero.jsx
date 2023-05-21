@@ -38,7 +38,7 @@ const Hero = () => {
           to="about"
           spy={true}
           smooth={true}
-          offset={-200} // Adjust this offset based on your layout
+          offset={-100} // Adjust this offset based on your layout
           duration={100}
           className='z-1 cursor-pointer w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'
 
