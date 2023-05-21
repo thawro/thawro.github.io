@@ -1,9 +1,7 @@
 import { SectionWrapper } from "../hoc"
 import { technologies } from "../constants"
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
 import { styles } from '../styles'
-import { fadeIn, textVariant } from '../utils/motion'
 
 
 
@@ -14,9 +12,7 @@ const TechBadge = ({ index, name, icon }) => {
     <div
       className=" xs:w-[250px] w-full h-full flex justify-center items-center "
     >
-      <motion.div
-        variants={fadeIn("right", "spring", 0.15 * index, 0.1)}
-      >
+      <div>
         <div
           onMouseEnter={() => setShowText(true)}
           onMouseLeave={() => setShowText(false)}
@@ -34,20 +30,21 @@ const TechBadge = ({ index, name, icon }) => {
               drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]
               transition duration-500 text-white text-[18px] font-bold`}>{name}</span>
         </div>
-      </motion.div>
+      </div>
     </div >
   </>
 }
-
 const Tech = () => {
+  const isMobile = window.matchMedia('(max-width: 500px)').matches
+
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <div>
         <p className={styles.sectionSubText}>
           Which technologies do I use?</p>
         <h2 className={styles.sectionHeadText}>
           Tech stack.</h2>
-      </motion.div>
+      </div>
       <div className="py-5 flex flex-row flex-wrap justify-center text-center gap-10">
         {technologies.map((technology, index) => (
           <TechBadge index={index} {...technology} />
@@ -58,4 +55,4 @@ const Tech = () => {
   )
 }
 
-export default SectionWrapper(Tech, "")
+export default SectionWrapper(Tech, "tech", true)

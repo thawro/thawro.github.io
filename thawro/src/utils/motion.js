@@ -86,3 +86,17 @@ export const staggerContainer = (staggerChildren, delayChildren) => {
         },
     };
 };
+
+
+
+
+export async function scrollToElement(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        var offset = element.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+            top: offset,
+            behavior: 'smooth'
+        });
+    }
+}

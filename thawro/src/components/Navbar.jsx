@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import { styles } from '../styles'
-import { navLinks } from '../constants'
+import { navLinks, socials } from '../constants'
 import { logo, menu, close } from '../assets'
+import { scrollToElement } from '../utils/motion'
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const CloseOnOutsideClick = ({ children, onClose }) => {
   const ref = useRef(null);
@@ -20,7 +21,7 @@ const CloseOnOutsideClick = ({ children, onClose }) => {
     };
   }, [onClose]);
 
-  return <div ref={ref}>{children}</div>;
+  return <div className='sm:hidden' ref={ref}>{children}</div>;
 };
 
 
@@ -34,7 +35,7 @@ const Navbar = () => {
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
           to="/"
-          className='flex items-center gap-2'
+          className='flex items-center gap-2 cursor-pointer'
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0)
@@ -54,7 +55,14 @@ const Navbar = () => {
               className={`${active == link.title ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <Link
+                activeClass="active"
+                to={link.id}
+                spy={true}
+                smooth={true}
+                offset={-100} // Adjust this offset based on your layout
+                duration={100}
+              >{link.title}</Link>
             </li>
           )}
         </ul>
@@ -63,7 +71,7 @@ const Navbar = () => {
             <img
               src={toggle ? close : menu}
               alt='menu'
-              className='w-[28px] h-[28px] object-contain'
+              className='w-[28px] h-[28px] object-contain cursor-pointer'
               onClick={() => setToggle(!toggle)}
             />
 
@@ -71,17 +79,24 @@ const Navbar = () => {
               className={`${!toggle ? "hidden" : "flex"} p-6 black-gradient absolute top-[60px] right-0  min-w-[140px] z-10 rounded-xl`}
             >
               <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
-                {navLinks.map((nav) => (
+                {navLinks.map((link) => (
                   <li
-                    key={nav.id}
-                    className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-secondary"
+                    key={link.id}
+                    className={`font-poppins font-medium cursor-pointer text-[16px] ${active === link.title ? "text-white" : "text-secondary"
                       }`}
                     onClick={() => {
                       setToggle(!toggle);
-                      setActive(nav.title);
+                      setActive(link.title);
                     }}
                   >
-                    <a href={`#${nav.id}`}>{nav.title}</a>
+                    <Link
+                      activeClass="active"
+                      to={link.id}
+                      spy={true}
+                      smooth={true}
+                      offset={-200} // Adjust this offset based on your layout
+                      duration={100}
+                    >{link.title}</Link>
                   </li>
                 ))}
               </ul>

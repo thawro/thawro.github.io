@@ -5,5 +5,6 @@ import technologies from "./technologies";
 import experiences from "./experiences";
 import testimonials from "./testimonials";
 import projects from "./projects";
+import socials from "./socials";
 
-export { navLinks, services, technologies, experiences, testimonials, projects, flaticonRefs };
+export { socials, navLinks, services, technologies, experiences, testimonials, projects, flaticonRefs };

@@ -1,15 +1,13 @@
-import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { SectionWrapper } from '../hoc'
 import { projects } from '../constants'
-import { fadeIn, textVariant } from '../utils/motion'
 import Markdown from './Markdown'
 import { Suspense, useState, useEffect } from 'react'
 import { github } from "../assets";
-import { CgClose } from 'react-icons/cg'
+import PopUpWindow from './PopUpWindow'
 
 
-const ProjectInfo = ({ index, name, description, tags, image, github_name, app_url, app_icon }) => {
+const ProjectInfo = ({ github_name, app_url }) => {
   const markdown_url = `https://raw.githubusercontent.com/thawro/${github_name}/main/INFO.md`
   const [markdown, setMarkdown] = useState("")
 
@@ -17,7 +15,6 @@ const ProjectInfo = ({ index, name, description, tags, image, github_name, app_u
     const fetchData = async () => {
       try {
         const response = await fetch(markdown_url);
-        console.log(markdown_url)
         var text = await response.text();
         setMarkdown(text);
       } catch (error) {
@@ -27,7 +24,6 @@ const ProjectInfo = ({ index, name, description, tags, image, github_name, app_u
 
     fetchData();
   }, []);
-  console.log(app_url)
   return <div>
     <Suspense fallback={null}>
       <Markdown markdown={markdown} />
@@ -39,88 +35,31 @@ const ProjectInfo = ({ index, name, description, tags, image, github_name, app_u
 }
 
 
-const CustomModal = ({ isOpen, onClose, children }) => {
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
 
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [isOpen]);
-
-
-  const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) {
-      // Clicked on the overlay (outside the content)
-      onClose();
-    }
-  };
-
-  if (!isOpen) {
-    return null;
-  }
-
-  const overlayStyle = {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    transform: `scale(${isOpen ? "1" : "0"})`,
-    opacity: isOpen ? 1 : 0,
-    animation: 'openAnimation 1s ease forwards',
-    width: '100vw',
-    height: '100vh',
-    paddingTop: '3em',
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
-    zIndex: 9999,
-    // display: 'flex',
-    alignItems: 'center',
-    // borderRadius: '80px',
-    justifyContent: 'center',
-  };
-
-  const contentStyle = {
-    maxWidth: '90vw',
-    maxHeight: '80vh', // Adjust as needed to limit the height of the modal content
-    margin: '10vh 5vw',
-    // position: 'relative',
-    overflow: 'auto',
-    padding: '15px 30px',
-    backgroundColor: 'black',
-    borderRadius: '15px',
-  }
-
-  return (
-    <div style={overlayStyle} onClick={handleOverlayClick}>
-      <div style={contentStyle}>
-        <CgClose onClick={onClose} className="float-right cursor-pointer text-[50px] text-white" />
-        {children}
-      </div>
-    </div>
-  );
-}
-
-
-const ProjectCard = ({ index, project }) => {
+const ProjectCard = ({ key, index, project }) => {
   const { name, description, tags, image, github_name, app_url, app_icon } = project
   const [isOpen, setIsOpen] = useState(false);
 
   const sleep = (milliseconds) => {
     return new Promise((resolve) => setTimeout(resolve, milliseconds));
   };
-
+  var feedbacksSection = document.getElementById("feedbacks");
 
   async function openModal() {
-    window.location.href = "#projects"
     await sleep(100);
     setIsOpen(true);
+    if (feedbacksSection !== null) {
+      feedbacksSection.style.animation = "closePopUpAnimation 1s ease forwards"
+      feedbacksSection.style.opacity = 0
+    }
   };
 
-  const closeModal = () => {
+  function closeModal() {
     setIsOpen(false);
+    if (feedbacksSection !== null) {
+      feedbacksSection.style.opacity = 1
+      feedbacksSection.style.animation = "openPopUpAnimation 1s ease forwards"
+    }
   };
 
   const urls = [
@@ -134,9 +73,7 @@ const ProjectCard = ({ index, project }) => {
     }
   ]
   return (
-    <motion.div
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-    >
+    <div id={`project-${index}`}>
 
       <div
         className='cursor-pointer bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
@@ -182,17 +119,18 @@ const ProjectCard = ({ index, project }) => {
 
       </div>
       <div>
-        <CustomModal
+        <PopUpWindow
           isOpen={isOpen}
           onClose={closeModal}
         >
           <ProjectInfo
             key={`project-${index}`}
-            index={index}
-            {...project} />
-        </CustomModal>
+            github_name={project.github_name}
+            app_url={project.app_url}
+          />
+        </PopUpWindow>
       </div>
-    </motion.div >
+    </div>
   )
 }
 
@@ -202,27 +140,22 @@ const ProjectCard = ({ index, project }) => {
 const Projects = () => {
   return (
     <>
-      <motion.div
-        variants={textVariant()}
-      >
+      <div>
         <p className={styles.sectionSubText}>
           My work</p>
         <h2 className={styles.sectionHeadText}>
           Projects.</h2>
-      </motion.div>
+      </div>
       <div className='w-full flex'>
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
-        >
+        <p className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>
           The Following projects show my skills as ML engineer.
           Each project is briefly described with links to code
           repositories and live demos in it. It reflects my ability
           to solve complex problems, work with different technologies,
           and manage projects effectively. Click on the project card to see more.
-        </motion.p>
+        </p>
       </div>
-      <div className='mt-20 flex flex-wrap gap-7 justify-center'>
+      <div className='mt-20 flex flex-wrap gap-7 justify-center' id='projects-cards'>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} project={project} />
         ))}
@@ -231,4 +164,4 @@ const Projects = () => {
   )
 }
 
-export default SectionWrapper(Projects, "projects")
+export default SectionWrapper(Projects, "projects", true)
