@@ -40,14 +40,15 @@ const About = () => {
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
         I finished Bachelor's degree in Biomedical Engineering and
-        Master's degree in Artificial Intelligence both with 5.5 grade.
+        Master's degree in Artificial Intelligence both with 5.5 grade (A+).
         With two years of experience as a Machine Learning Engineer,
         I possess a solid knowledge of Neural Networks algorithms.
-        My tech stack includes Python, PyTorch Lightning, WandB,
-        MLflow, Docker, and more. I excel in implementing Deep Learning
-        algorithms for image and medical signal tasks. Currently,
-        I am enhancing my knowledge of computer vision models for
-        continued professional growth.
+        I specialize in implementing Deep Learning algorithms for
+        image and medical signal tasks. Currently, I am enhancing my
+        knowledge of computer vision models for continued professional growth.
+        I feel most comfortable in the role of ML Engineer,
+        where I can contribute to both the research involved in model training
+        and the subsequent productisation process.
       </p>
       <div className='mt-20 flex flex-wrap gap-10 justify-center'>
         {services.map((service, index) => (

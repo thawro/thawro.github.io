@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
-import { scrollToElement } from "../utils/motion"
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const Hero = () => {
@@ -30,7 +29,7 @@ const Hero = () => {
       </div>
 
 
-      {/* <ComputersCanvas /> */}
+      {/* <NeuralNetwork /> */}
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <Link

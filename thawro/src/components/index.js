@@ -10,6 +10,7 @@ import Contact from './Contact';
 import Footer from './Footer'
 import Markdown from './Markdown'
 import PopUpWindow from './PopUpWindow';
+import IconLink from './IconLink';
 
 export {
   Hero,
@@ -26,5 +27,6 @@ export {
   StarsCanvas,
   Footer,
   Markdown,
-  PopUpWindow
+  PopUpWindow,
+  IconLink,
 }

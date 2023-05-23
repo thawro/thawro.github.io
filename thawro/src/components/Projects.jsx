@@ -40,26 +40,12 @@ const ProjectCard = ({ key, index, project }) => {
   const { name, description, tags, image, github_name, app_url, app_icon } = project
   const [isOpen, setIsOpen] = useState(false);
 
-  const sleep = (milliseconds) => {
-    return new Promise((resolve) => setTimeout(resolve, milliseconds));
-  };
-  var feedbacksSection = document.getElementById("feedbacks");
-
   async function openModal() {
-    await sleep(100);
     setIsOpen(true);
-    if (feedbacksSection !== null) {
-      feedbacksSection.style.animation = "closePopUpAnimation 1s ease forwards"
-      feedbacksSection.style.opacity = 0
-    }
   };
 
   function closeModal() {
     setIsOpen(false);
-    if (feedbacksSection !== null) {
-      feedbacksSection.style.opacity = 1
-      feedbacksSection.style.animation = "openPopUpAnimation 1s ease forwards"
-    }
   };
 
   const urls = [
@@ -85,7 +71,19 @@ const ProjectCard = ({ key, index, project }) => {
             alt={image}
             className='w-full h-full object-cover rounded-2xl'
           />
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+
+        </div>
+        <div className='mt-5'>
+          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
+          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+        </div>
+        <div className='w-full flex justify-between'>
+          <div className='mt-4 flex flex-wrap gap-2'>
+            {tags.map((tag) => (
+              <p key={tag.name} className={`text-[14px] ${tag.color}`}>#{tag.name}</p>
+            ))}
+          </div>
+          <div className='inset-0 flex justify-end m-3 card-img_hover'>
             {urls.map((url, index) => (
               <a
                 href={url.url}
@@ -95,7 +93,7 @@ const ProjectCard = ({ key, index, project }) => {
                   e.stopPropagation()
                 }
                 }
-                className='pulsating mr-2 mt-2 bg-tertiary border-2 border-indigo-300/50 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                className='glass mr-2 mt-2 bg-tertiary w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
               >
                 <img
                   src={url.icon}
@@ -106,15 +104,6 @@ const ProjectCard = ({ key, index, project }) => {
             ))}
 
           </div>
-        </div>
-        <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
-        </div>
-        <div className='mt-4 flex flex-wrap gap-2'>
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>#{tag.name}</p>
-          ))}
         </div>
 
       </div>

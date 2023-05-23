@@ -2,8 +2,9 @@ import React, { useEffect, useState, useRef } from 'react'
 import { styles } from '../styles'
 import { navLinks, socials } from '../constants'
 import { logo, menu, close } from '../assets'
-import { scrollToElement } from '../utils/motion'
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import { Link } from 'react-router-dom';
+import IconLink from './IconLink';
 
 const CloseOnOutsideClick = ({ children, onClose }) => {
   const ref = useRef(null);
@@ -21,7 +22,7 @@ const CloseOnOutsideClick = ({ children, onClose }) => {
     };
   }, [onClose]);
 
-  return <div className='sm:hidden' ref={ref}>{children}</div>;
+  return <div className='md:hidden' ref={ref}>{children}</div>;
 };
 
 
@@ -48,26 +49,38 @@ const Navbar = () => {
               | ML Engineer</span>
           </p>
         </Link>
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='list-none hidden md:flex flex-row gap-10'>
           {navLinks.map((link) =>
             <li
               key={link.id}
-              className={`${active == link.title ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
+              className={`mx-5 ${active == link.title ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-              <Link
+              <ScrollLink
                 activeClass="active"
                 to={link.id}
                 spy={true}
                 smooth={true}
                 offset={-100} // Adjust this offset based on your layout
                 duration={100}
-              >{link.title}</Link>
+              >{link.title}</ScrollLink>
             </li>
           )}
         </ul>
+        <div className='flex '>
+          {socials.map((url, index) => (
+            <IconLink
+              to={url.url}
+              icon=<url.icon className='
+                w-9 h-9 object-contain bg-[#080d1c] mx-1 
+                cursor-pointer'
+              />
+            />
+          ))}
+
+        </div>
         <CloseOnOutsideClick onClose={() => { setToggle(false) }}>
-          <div className='sm:hidden flex flex-1 justify-end items-center'>
+          <div className='md:hidden flex flex-1 justify-end items-center'>
             <img
               src={toggle ? close : menu}
               alt='menu'
@@ -89,14 +102,14 @@ const Navbar = () => {
                       setActive(link.title);
                     }}
                   >
-                    <Link
+                    <ScrollLink
                       activeClass="active"
                       to={link.id}
                       spy={true}
                       smooth={true}
                       offset={-200} // Adjust this offset based on your layout
                       duration={100}
-                    >{link.title}</Link>
+                    >{link.title}</ScrollLink>
                   </li>
                 ))}
               </ul>

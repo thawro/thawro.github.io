@@ -118,28 +118,7 @@
   transform: translateZ(0);
 }
 
-/* .icon-container {
-  position: relative;
-  display: inline-block;
-} */
 
-.pulsating {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
 
 
 @keyframes mulShdSpin {
@@ -250,5 +229,48 @@
   to {
     opacity: 0;
     transform: scale(0);
+  }
+}
+
+.pulsating {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+.glass {
+  border: rgba(255, 255, 255, 0.25) 1px solid;
+  /* Glass Effect */
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05));
+  background-size: 200% auto;
+  animation: shine 7s linear infinite;
+  transition: box-shadow 0.3s;
+}
+
+.glass:hover {
+  box-shadow: 0 0 0.75rem rgba(255, 255, 255, 0.7);
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+
+  100% {
+    background-position: 200%;
   }
 }
