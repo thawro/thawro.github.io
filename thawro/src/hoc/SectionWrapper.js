@@ -4,7 +4,6 @@ import { Element } from "react-scroll";
 
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { fadeIn } from "../utils/motion";
 
 
 const SectionWrapper = (Component, idName, useMotion) =>
@@ -13,10 +12,16 @@ const SectionWrapper = (Component, idName, useMotion) =>
         const [ref, inView] = useInView();
 
         const Variants = {
-            hidden: { opacity: 0 },
-            visible: { opacity: 1, transition: { ease: "easeOut", duration: 1.5 } },
+            hidden: {
+                opacity: 0,
+                y: 100
+            },
+            visible: {
+                opacity: 1,
+                y: 0,
+                transition: { ease: "easeOut", delay: 0.1, duration: 1.0 }
+            },
         }
-        console.log("FADEEEEE", fadeIn())
 
         useEffect(() => {
             if (inView) {
@@ -31,7 +36,7 @@ const SectionWrapper = (Component, idName, useMotion) =>
                         animate={controls}
                         initial="hidden"
                         variants={Variants}
-                        className={`${styles.paddingX} max-w-7xl mx-auto  z-0  pb-[100px] mb-[100px]`
+                        className={`${styles.paddingX} max-w-7xl mx-auto  z-0  mb-[100px]`
                         }
                     >
                         < Component />
