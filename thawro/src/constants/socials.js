@@ -1,12 +1,12 @@
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import { github, linkedin } from '../assets';
 
 const socials = [
     {
-        icon: AiFillGithub,
+        icon: github,
         url: "https://github.com/thawro",
     },
     {
-        icon: AiFillLinkedin,
+        icon: linkedin,
         url: "https://www.linkedin.com/in/tomasz-hawro-a029501b1/",
     },
 ];

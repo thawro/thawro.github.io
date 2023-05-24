@@ -1,5 +1,7 @@
+import React, { useEffect } from 'react'
+/** @jsxImportSource theme-ui */
+
 import { CgClose } from 'react-icons/cg'
-import { useEffect } from 'react'
 
 
 const PopUpWindow = ({ isOpen, onClose, children }) => {
@@ -18,7 +20,6 @@ const PopUpWindow = ({ isOpen, onClose, children }) => {
 
     const handleOverlayClick = (e) => {
         if (e.target === e.currentTarget) {
-            // Clicked on the overlay (outside the content)
             onClose();
         }
     };
@@ -36,30 +37,35 @@ const PopUpWindow = ({ isOpen, onClose, children }) => {
         animation: `${isOpen ? "openPopUpAnimation" : "closePopUpAnimation"} 1s ease forwards`,
         width: '100vw',
         height: '100vh',
-        // paddingTop: '3em',
-        backgroundColor: 'rgba(255, 255, 255, 0.5)',
         zIndex: 9999,
-        // display: 'flex',
         alignItems: 'center',
-        // borderRadius: '80px',
         justifyContent: 'center',
     };
 
     const contentStyle = {
         maxWidth: '90vw',
-        maxHeight: '80vh', // Adjust as needed to limit the height of the modal content
+        maxHeight: '80vh',
         margin: '10vh 5vw',
-        // position: 'relative',
         overflow: 'auto',
         padding: '15px 30px',
-        backgroundColor: 'black',
         borderRadius: '15px',
     }
 
     return (
-        <div style={overlayStyle} onClick={handleOverlayClick}>
-            <div style={contentStyle}>
-                <CgClose onClick={onClose} className="float-right cursor-pointer text-[50px] text-white" />
+        <div
+            style={overlayStyle}
+            onClick={handleOverlayClick}
+            sx={{ background: "popupOverlayBackground" }}
+        >
+            <div
+                style={contentStyle}
+                sx={{ background: "popupContentBackground" }}
+            >
+                <CgClose
+                    onClick={onClose}
+                    className="float-right cursor-pointer text-[50px]"
+                    sx={{ color: "text" }}
+                />
                 {children}
             </div>
         </div>

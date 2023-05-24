@@ -1,3 +1,6 @@
+import React from "react";
+/** @jsxImportSource theme-ui */
+
 import ReactMarkdown from 'react-markdown'
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";

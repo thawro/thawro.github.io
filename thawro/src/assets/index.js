@@ -9,6 +9,7 @@ import github from "./github.png";
 import hf_spaces from "./hf_spaces.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import linkedin from "./linkedin.png"
 
 import python from "./tech/python.png";
 import sklearn from "./tech/sklearn.png";
@@ -60,4 +61,5 @@ export {
   jobit,
   flowers_classification,
   tripguide,
+  linkedin
 };

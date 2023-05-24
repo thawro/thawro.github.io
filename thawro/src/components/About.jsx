@@ -1,8 +1,11 @@
-import React from 'react'
+import React from "react";
+/** @jsxImportSource theme-ui */
+
 import { styles } from '../styles'
 import { services } from '../constants'
 import { fadeIn } from '../utils/motion'
 import { SectionWrapper } from '../hoc';
+
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -17,10 +20,16 @@ const ServiceCard = ({ index, title, icon }) => {
             scale: 1,
             speed: 450
           }}
-          className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+          className='rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+          sx={{ backgroundColor: "backgroundTertiary" }}
         >
           <img src={icon} alt={title} className='w-20 h-20 object-containt' />
-          <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
+          <h3
+            className='text-[20px] font-bold text-center'
+            sx={{ color: "text" }}
+          >
+            {title}
+          </h3>
         </div>
 
       </div>
@@ -32,12 +41,19 @@ const About = () => {
 
   return (
     <div id="about">
-      <p className={styles.sectionSubText}>
-        Introduction</p>
-      <h2 className={styles.sectionHeadText}>
-        Overview.</h2>
       <p
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className="sm:text-[18px] text-[14px] uppercase tracking-wider"
+        sx={{ color: "textSecondary" }}
+      >
+        Introduction</p>
+      <h2
+        className={styles.sectionHeadText}
+        sx={{ color: "text" }}
+      >
+        Overview.</h2>
+      <div
+        className='mt-4 text-[17px] max-w-3xl leading-[30px]'
+        sx={{ color: "textSecondary" }}
       >
         I finished Bachelor's degree in Biomedical Engineering and
         Master's degree in Artificial Intelligence both with 5.5 grade (A+).
@@ -49,7 +65,7 @@ const About = () => {
         I feel most comfortable in the role of ML Engineer,
         where I can contribute to both the research involved in model training
         and the subsequent productisation process.
-      </p>
+      </div>
       <div className='mt-20 flex flex-wrap gap-10 justify-center'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />

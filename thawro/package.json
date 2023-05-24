@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@emotion/react": "^11.11.0",
     "@react-three/drei": "^9.68.3",
     "@react-three/fiber": "^8.13.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -25,6 +26,7 @@
     "react-syntax-highlighter": "^15.5.0",
     "react-vertical-timeline-component": "^3.6.0",
     "remark-gfm": "^3.0.1",
+    "theme-ui": "^0.15.7",
     "three": "^0.152.2",
     "web-vitals": "^2.1.4"
   },

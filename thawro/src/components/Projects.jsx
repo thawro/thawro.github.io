@@ -1,8 +1,10 @@
+import React, { Suspense, useState, useEffect } from "react";
+/** @jsxImportSource theme-ui */
+
 import { styles } from '../styles'
 import { SectionWrapper } from '../hoc'
 import { projects } from '../constants'
 import Markdown from './Markdown'
-import { Suspense, useState, useEffect } from 'react'
 import { github } from "../assets";
 import PopUpWindow from './PopUpWindow'
 
@@ -10,6 +12,12 @@ import PopUpWindow from './PopUpWindow'
 const ProjectInfo = ({ github_name, app_url }) => {
   const markdown_url = `https://raw.githubusercontent.com/thawro/${github_name}/main/INFO.md`
   const [markdown, setMarkdown] = useState("")
+
+  const handleLoadError = () => {
+    // Handle the error when the external URL is not accessible
+    console.log("Failed to load the web component.");
+    // Perform any necessary actions, such as displaying an error message or taking alternative rendering steps.
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,20 +31,25 @@ const ProjectInfo = ({ github_name, app_url }) => {
     };
 
     fetchData();
-  }, []);
+  }, [markdown_url]);
   return <div>
     <Suspense fallback={null}>
       <Markdown markdown={markdown} />
       <hr />
-      <h1 className={`${styles.heroHeadText} text-white text-center`}>Demo</h1>
-      <gradio-app space={`thawro/${github_name}`}></gradio-app>
+      <h1
+        className={`font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 text-center`}
+        sx={{ color: "text" }}
+      >
+        Demo
+      </h1>
+      <gradio-app space={`thawro/${github_name}`} onError={handleLoadError}></gradio-app>
     </Suspense>
   </div>
 }
 
 
 
-const ProjectCard = ({ key, index, project }) => {
+const ProjectCard = ({ index, project }) => {
   const { name, description, tags, image, github_name, app_url, app_icon } = project
   const [isOpen, setIsOpen] = useState(false);
 
@@ -62,7 +75,8 @@ const ProjectCard = ({ key, index, project }) => {
     <div id={`project-${index}`}>
 
       <div
-        className='cursor-pointer bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className='cursor-pointer p-5 rounded-2xl sm:w-[360px] w-full'
+        sx={{ background: "backgroundTertiary" }}
         onClick={(openModal)}
       >
         <div className='relative w-full h-[230px]'>
@@ -74,18 +88,29 @@ const ProjectCard = ({ key, index, project }) => {
 
         </div>
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <h3
+            className='font-bold text-[24px]'
+            sx={{ color: "text" }}
+          >
+            {name}
+          </h3>
+          <p
+            className='mt-2 text-[14px]'
+            sx={{ color: "textSecondary" }}
+          >
+            {description}
+          </p>
         </div>
         <div className='w-full flex justify-between'>
           <div className='mt-4 flex flex-wrap gap-2'>
-            {tags.map((tag) => (
+            {tags.map((tag, index) => (
               <p key={tag.name} className={`text-[14px] ${tag.color}`}>#{tag.name}</p>
             ))}
           </div>
           <div className='inset-0 flex justify-end m-3 card-img_hover'>
             {urls.map((url, index) => (
               <a
+                key={`url-${index}`}
                 href={url.url}
                 onClick={(e) => {
                   e.preventDefault()
@@ -93,12 +118,13 @@ const ProjectCard = ({ key, index, project }) => {
                   e.stopPropagation()
                 }
                 }
-                className='glass mr-2 mt-2 bg-tertiary w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                className='glass mx-1 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                sx={{ background: "backgroundTertiary" }}
               >
                 <img
                   src={url.icon}
                   alt={url.icon}
-                  className='w-3/4 h-3/4 object-contain pointer-events-none'
+                  className='w-[70%] h-[70%] object-contain pointer-events-none'
                 />
               </a>
             ))}
@@ -130,13 +156,24 @@ const Projects = () => {
   return (
     <>
       <div>
-        <p className={styles.sectionSubText}>
-          My work</p>
-        <h2 className={styles.sectionHeadText}>
-          Projects.</h2>
+        <p
+          className={styles.sectionSubText}
+          sx={{ color: "textSecondary" }}
+        >
+          My work
+        </p>
+        <h2
+          className={styles.sectionHeadText}
+          sx={{ color: "text" }}
+        >
+          Projects.
+        </h2>
       </div>
       <div className='w-full flex'>
-        <p className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+        <p
+          className='mt-3 text-[17px] max-w-3xl leading-[30px]'
+          sx={{ color: "textSecondary" }}
+        >
           The Following projects show my skills as ML engineer.
           Each project is briefly described with links to code
           repositories and live demos in it. It reflects my ability
