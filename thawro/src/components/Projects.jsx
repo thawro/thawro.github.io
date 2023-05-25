@@ -107,7 +107,7 @@ const ProjectCard = ({ index, project }) => {
               <p key={tag.name} className={`text-[14px] ${tag.color}`}>#{tag.name}</p>
             ))}
           </div>
-          <div className='inset-0 flex justify-end m-3 card-img_hover'>
+          <div className='inset-0 flex justify-end m-3'>
             {urls.map((url, index) => (
               <a
                 key={`url-${index}`}
@@ -118,8 +118,8 @@ const ProjectCard = ({ index, project }) => {
                   e.stopPropagation()
                 }
                 }
-                className='glass mx-1 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-                sx={{ background: "backgroundTertiary" }}
+                className='glass border-[1px] border-solid mx-1 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                sx={{ borderColor: "backgroundSecondary" }}
               >
                 <img
                   src={url.icon}
@@ -145,7 +145,7 @@ const ProjectCard = ({ index, project }) => {
           />
         </PopUpWindow>
       </div>
-    </div>
+    </div >
   )
 }
 

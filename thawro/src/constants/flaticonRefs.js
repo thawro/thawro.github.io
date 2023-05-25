@@ -20,6 +20,16 @@ const flaticonRefs = [
         title: "integrated development environment icons",
         text: "Integrated development environment icons created by Dewi Sari - Flaticon"
     },
+    {
+        href: "https://icons8.com/icon/JHsm5oZeWqae/sun",
+        title: "",
+        text: "Sun icon by Icons8"
+    },
+    {
+        href: "https://icons8.com/icon/HpcvnWPxS15j/moon-symbol",
+        title: "",
+        text: "Moon Symbol icon by Icons8"
+    }
 ]
 
 export default flaticonRefs

@@ -7,8 +7,6 @@ import { styles } from "../styles";
 import { Link } from "react-scroll";
 
 const Hero = () => {
-
-
   return (
     <div className={`relative w-full h-screen mx-auto`}>
       <div
@@ -20,7 +18,7 @@ const Hero = () => {
             sx={{ background: "hero" }}
           />
           <div
-            className='w-1 sm:h-80 h-40 violet-gradient'
+            className='w-1 sm:h-80 h-40'
             sx={{ background: "heroLine" }}
           />
         </div>
@@ -34,7 +32,7 @@ const Hero = () => {
           </h1>
           <p
             className={`${styles.heroSubText} mt-2`}
-            sx={{ text: "textTertiary" }}
+            sx={{ color: "textTertiary" }}
           >
             I develop Machine Learning models for
             <br className='sm:block hidden' />
@@ -55,7 +53,7 @@ const Hero = () => {
           offset={-100} // Adjust this offset based on your layout
           duration={100}
           className='z-1 cursor-pointer w-[35px] h-[64px] rounded-3xl border-4 flex justify-center items-start p-2'
-          sx={{ borderColor: "backgroundSecondary" }}
+          sx={{ borderColor: "textSecondary" }}
         >
           <motion.div
             animate={{
@@ -67,7 +65,7 @@ const Hero = () => {
               repeatType: "loop",
             }}
             className='w-3 h-3 rounded-full mb-1'
-            sx={{ background: "backgroundSecondary" }}
+            sx={{ background: "textSecondary" }}
           />
         </Link>
       </div>

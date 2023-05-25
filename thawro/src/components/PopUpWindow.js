@@ -59,7 +59,7 @@ const PopUpWindow = ({ isOpen, onClose, children }) => {
         >
             <div
                 style={contentStyle}
-                sx={{ background: "popupContentBackground" }}
+                sx={{ background: "backgroundTertiary" }}
             >
                 <CgClose
                     onClick={onClose}

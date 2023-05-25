@@ -6,7 +6,8 @@ import { navLinks, socials } from '../constants'
 import { logo, menu, close } from '../assets'
 import { Link as ScrollLink } from "react-scroll";
 import { Link } from 'react-router-dom';
-import { Switch, useColorMode } from "theme-ui";
+import { sun, moon } from "../assets";
+import { useThemeUI } from "theme-ui";
 
 const CloseOnOutsideClick = ({ children, onClose }) => {
   const ref = useRef(null);
@@ -29,13 +30,16 @@ const CloseOnOutsideClick = ({ children, onClose }) => {
 
 
 const Navbar = ({ toggleTheme }) => {
+  const context = useThemeUI()
+  var isDark = context.colorMode === "dark"
+
   const [active, setActive] = useState('')
   const [toggle, setToggle] = useState(false)
 
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20`}
-      sx={{ background: "backgroundPrimary" }}
+      sx={{ background: "backgroundSecondary" }}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
@@ -79,9 +83,7 @@ const Navbar = ({ toggleTheme }) => {
           {socials.map((url, index) => (
             <a
               key={`social-${index}`}
-              className='
-                w-9 h-9 object-contain mx-2
-                cursor-pointer'
+              className='w-9 h-9 object-contain mx-2 cursor-pointer'
               sx={{ background: "backgroundPrimary", color: "text" }}
               onClick={(e) => {
                 e.preventDefault()
@@ -99,9 +101,12 @@ const Navbar = ({ toggleTheme }) => {
           ))}
 
         </div>
-        <div>
-          <Switch
-            onClick={toggleTheme}
+        <div onClick={toggleTheme} className='cursor-pointer'>
+          <img
+            className='w-9 h-9 object-contain mx-2 pointer-events-none'
+            src={isDark ? sun : moon}
+            alt="color mode switcher"
+            title={`Switch to ${isDark ? "light" : "dark"} theme`}
           />
         </div>
         <CloseOnOutsideClick onClose={() => { setToggle(false) }}>
@@ -114,11 +119,14 @@ const Navbar = ({ toggleTheme }) => {
             />
 
             <div
-              className={`${!toggle ? "hidden" : "flex"} p-6 black-gradient absolute top-[60px] right-0  min-w-[140px] z-10 rounded-xl`}
+              className={`${!toggle ? "hidden" : "flex"} absolute top-[60px] right-0  min-w-[140px] z-10 rounded-xl`}
+              sx={{ background: "toggleMenuBackground" }}
             >
-              <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
+              <ul className='list-none flex justify-end items-start flex-1 flex-col'>
                 {navLinks.map((link) => (
-                  <li key={link.id}>
+                  <li key={link.id}
+                    className='w-full cursor-pointer px-6 py-2'
+                  >
                     <ScrollLink
                       activeClass="active"
                       to={link.id}
@@ -133,7 +141,7 @@ const Navbar = ({ toggleTheme }) => {
 
                     >
                       <span
-                        className="font-poppins font-medium cursor-pointer text-[16px]"
+                        className="font-poppins font-medium text-[16px]"
                         sx={{ color: `${active === link.title ? "text" : "textSecondary"}` }}
                       >
                         {link.title}

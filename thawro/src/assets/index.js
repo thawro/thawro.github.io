@@ -25,6 +25,8 @@ import mlflow from "./tech/mlflow.png";
 import numpy from "./tech/numpy.png";
 import wandb from "./tech/wandb.png";
 
+import sun from "./sun.png"
+import moon from "./moon.png"
 
 
 import bonasoft from "./company/bonasoft.png";
@@ -61,5 +63,7 @@ export {
   jobit,
   flowers_classification,
   tripguide,
-  linkedin
+  linkedin,
+  sun,
+  moon
 };

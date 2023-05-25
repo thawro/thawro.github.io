@@ -253,7 +253,7 @@
 
 
 .glass {
-  border: rgba(255, 255, 255, 0.25) 1px solid;
+  /* border: rgba(255, 255, 255, 0.25) 1px solid; */
   /* Glass Effect */
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05));
   background-size: 200% auto;
