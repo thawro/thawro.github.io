@@ -38,7 +38,7 @@ const darkTheme = {
         toggleMenuBackground: "linear-gradient(to right, #434343, #000000)",
 
         hero: "rgba(145, 94, 255, 1.0)",
-        heroLine: "linear-gradient(to bottom, rgba(145, 94, 255, 1.0), rgba(145, 94, 255, 0.0));",
+        heroLine: "linear-gradient(to bottom, rgba(145, 94, 255, 1.0), rgba(145, 94, 255, 0.0))",
 
     },
 };

@@ -1,6 +1,6 @@
 import {
     flowers_classification,
-    hf_spaces,
+    hugging_face,
 } from "../assets";
 
 const projects = [
@@ -25,7 +25,7 @@ const projects = [
         ],
         github_name: "flowers-102-classification",
         app_url: "https://huggingface.co/spaces/thawro/flowers-102-classification",
-        app_icon: hf_spaces
+        app_icon: hugging_face
     },
     {
         name: "Flowers classification",
@@ -48,7 +48,7 @@ const projects = [
         ],
         github_name: "flowers-102-classification",
         app_url: "https://huggingface.co/spaces/thawro/flowers-102-classification",
-        app_icon: hf_spaces
+        app_icon: hugging_face
     },
 ];
 

@@ -52,7 +52,7 @@ const Contact = () => {
 
 
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden justify-center">
       <div
         className="flex-[0.75] p-8 rounded-2xl"
         sx={{ background: "feedbacksBackground" }}

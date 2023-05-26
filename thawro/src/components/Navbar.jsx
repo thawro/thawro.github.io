@@ -84,7 +84,7 @@ const Navbar = ({ toggleTheme }) => {
             <a
               key={`social-${index}`}
               className='w-9 h-9 object-contain mx-2 cursor-pointer'
-              sx={{ background: "backgroundPrimary", color: "text" }}
+              // sx={{ background: "backgroundPrimary" }}
               onClick={(e) => {
                 e.preventDefault()
                 window.open(url.url, "_blank")
@@ -95,7 +95,7 @@ const Navbar = ({ toggleTheme }) => {
                 src={url.icon}
                 alt={url.icon}
                 className='w-9 h-9 object-contain cursor-pointer'
-                sx={{ background: "backgroundPrimary" }}
+              // sx={{ background: "backgroundPrimary" }}
               />
             </a>
           ))}

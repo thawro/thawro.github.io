@@ -1,40 +1,37 @@
 import logo from "./logo.svg";
 
-import ml_engineer from "./about/ml_engineer.png";
-import researcher from "./about/researcher.png";
-import data_scientist from "./about/data_scientist.png";
-import python_developer from "./about/python_developer.png";
+import ml_engineer from "./about/ml_engineer.svg";
+import researcher from "./about/researcher.svg";
+import data_scientist from "./about/data_scientist.svg";
+import python_developer from "./about/python_developer.svg";
 
-import github from "./github.png";
-import hf_spaces from "./hf_spaces.png";
+import github from "./github.svg";
+import hugging_face from "./hugging_face.svg";
 import menu from "./menu.svg";
 import close from "./close.svg";
-import linkedin from "./linkedin.png"
+import linkedin from "./linkedin.svg"
 
-import python from "./tech/python.png";
-import sklearn from "./tech/sklearn.png";
+import python from "./tech/python.svg";
+import sklearn from "./tech/sklearn.svg";
+import docker from "./tech/docker.svg";
+import pytorch from "./tech/pytorch.svg";
+import git from "./tech/git.svg";
+import lightning from "./tech/lightning.svg";
+import matplotlib from "./tech/matplotlib.svg";
+import plotly from "./tech/plotly.svg";
+import seaborn from "./tech/seaborn.svg";
+import mlflow from "./tech/mlflow.svg";
+import numpy from "./tech/numpy.svg";
+import wandb from "./tech/wandb.svg";
 
-import docker from "./tech/docker.png";
-import pytorch from "./tech/pytorch.png";
-import git from "./tech/git.png";
-import lightning from "./tech/lightning.png";
-import matplotlib from "./tech/matplotlib.png";
-import plotly from "./tech/plotly.png";
-import seaborn from "./tech/seaborn.png";
-import mlflow from "./tech/mlflow.png";
-import numpy from "./tech/numpy.png";
-import wandb from "./tech/wandb.png";
-
-import sun from "./sun.png"
-import moon from "./moon.png"
+import sun from "./sun.svg"
+import moon from "./moon.svg"
 
 
 import bonasoft from "./company/bonasoft.png";
 import mxlabs from "./company/mxlabs.png";
 
-import jobit from "./projects/flowers_classification.png";
 import flowers_classification from "./projects/flowers_classification.png"
-import tripguide from "./projects/flowers_classification.png";
 
 export {
   logo,
@@ -43,7 +40,7 @@ export {
   data_scientist,
   ml_engineer,
   github,
-  hf_spaces,
+  hugging_face,
   menu,
   wandb,
   numpy,
@@ -60,9 +57,7 @@ export {
   mlflow,
   bonasoft,
   mxlabs,
-  jobit,
   flowers_classification,
-  tripguide,
   linkedin,
   sun,
   moon
