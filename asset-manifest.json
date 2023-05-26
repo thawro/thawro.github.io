@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.1ba5760e.css",
-    "main.js": "/static/js/main.c9607121.js",
+    "main.js": "/static/js/main.5f2e830f.js",
     "static/js/787.3939298d.chunk.js": "/static/js/787.3939298d.chunk.js",
     "static/media/flowers_classification.png": "/static/media/flowers_classification.6b7eefbcb580021cb719.png",
     "static/media/hugging_face.svg": "/static/media/hugging_face.5480133029d31b621ec50fc947ad8382.svg",
-    "static/media/researcher.svg": "/static/media/researcher.9ed43c863cbf4d10ed82c7fe06d11946.svg",
-    "static/media/data_scientist.svg": "/static/media/data_scientist.ba58bad37a2de1edb109e21efc75a653.svg",
-    "static/media/ml_engineer.svg": "/static/media/ml_engineer.8be0093bfee572c5243603c1627199e5.svg",
     "static/media/bonasoft.png": "/static/media/bonasoft.ffef4b2782307c34f9fa.png",
-    "static/media/python_developer.svg": "/static/media/python_developer.24adaa26ed455473557a19a1c1d992a7.svg",
+    "static/media/researcher.svg": "/static/media/researcher.fba510970d99b830aee5966a20e19f5e.svg",
+    "static/media/data_scientist.svg": "/static/media/data_scientist.bf625937997cbb90b3503f7c2f773e77.svg",
     "static/media/seaborn.svg": "/static/media/seaborn.6669b0cbc9c0fca8efeffc1e00f877ff.svg",
+    "static/media/ml_engineer.svg": "/static/media/ml_engineer.3da9355332d2b08efed34cb92a5dbe0e.svg",
+    "static/media/python_developer.svg": "/static/media/python_developer.eef81261dfbfe5efe8587b42fc1050d3.svg",
     "static/media/sklearn.svg": "/static/media/sklearn.58019548995fd625095879818e7005d2.svg",
     "static/media/plotly.svg": "/static/media/plotly.ffa6cc659a4cab7a224e27300d106e4c.svg",
     "static/media/logo.svg": "/static/media/logo.23a7a1b2163aabd31e2c151b47d3249c.svg",
@@ -31,11 +31,11 @@
     "static/media/moon.svg": "/static/media/moon.95bb5a3a5c74a95ee0a65736c38e8ce5.svg",
     "static/media/lightning.svg": "/static/media/lightning.288103cd7b52b5fdfc9643b0eb78dc6c.svg",
     "main.1ba5760e.css.map": "/static/css/main.1ba5760e.css.map",
-    "main.c9607121.js.map": "/static/js/main.c9607121.js.map",
+    "main.5f2e830f.js.map": "/static/js/main.5f2e830f.js.map",
     "787.3939298d.chunk.js.map": "/static/js/787.3939298d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1ba5760e.css",
-    "static/js/main.c9607121.js"
+    "static/js/main.5f2e830f.js"
   ]
 }
