@@ -9,7 +9,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
 }
@@ -254,9 +253,8 @@
 
 
 .glass {
-  /* border: rgba(255, 255, 255, 0.25) 1px solid; */
   /* Glass Effect */
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.15));
   background-size: 200% auto;
   animation: shine 7s linear infinite;
   transition: box-shadow 0.3s;

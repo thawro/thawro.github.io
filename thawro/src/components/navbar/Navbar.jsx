@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 /** @jsxImportSource theme-ui */
 
-import { styles } from '../../styles'
 import { navLinks, socials } from '../../constants'
 import { logo } from '../../assets'
 import { Link as ScrollLink } from "react-scroll";
@@ -10,21 +9,28 @@ import { Sun, Moon } from "../../assets";
 import { useThemeUI } from "theme-ui";
 import Burger from './Burger';
 import Menu from './Menu';
+import { getThemeColor } from '../../theme';
 
+var iconSize = "36px"
+var fontSize = "20px"
 
 const ModeSwitcher = ({ isDark, toggleTheme }) => {
-
+  const props = {
+    fill: getThemeColor(isDark, "textPrimary"),
+    width: iconSize,
+    height: iconSize,
+    className: 'pointer-events-none'
+  }
   return <div onClick={toggleTheme}>
     {isDark ?
       <Sun
-        fill="white"
-        className='pointer-events-none'
         title="Switch to light theme"
+        {...props}
       /> :
       <Moon
-        fill="black"
         className='pointer-events-none'
         title="Switch to dark theme"
+        {...props}
       />
     }
   </div>
@@ -39,79 +45,87 @@ const Navbar = ({ toggleTheme }) => {
   const [open, setOpen] = useState(false)
 
   return (
-    <nav
-      className={`${styles.paddingX} w-full flex items-center h-[90px] py-5 fixed top-0 z-20`}
-      sx={{ background: "backgroundSecondary" }}
+    <header
+      className={`px-[15px] py-[10px] w-full flex items-center fixed top-0 z-20`}
+      sx={{ background: "backgroundPrimary" }}
     >
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-        <Link
-          to="/"
-          className='flex items-center gap-2 cursor-pointer'
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0)
-          }}
-        >
-          <img
-            src={logo}
-            alt="logo"
-            className='sm:w-[50px] sm:h-50[px] w-[40px] h-40[px] object-contain'
-          />
-          <p
-            className='text-[22px] font-bold coursor-pointer flex'
-            sx={{ color: "text" }}
+      <div className='w-full flex justify-between items-center mx-auto'>
+        <ul className='flex flex-row'>
+          <Link
+            to="/"
+            className='flex items-center cursor-pointer'
+            onClick={() => {
+              setActive("");
+              window.scrollTo(0, 0)
+            }}
           >
-            Tomasz Hawro
-          </p>
-        </Link>
-        <ul className='list-none hidden md:flex flex-row '>
-          {navLinks.map((link, index) =>
-            <li
-              key={link.id}
-              className="mx-4 hover:text-white text-[18px] font-medium cursor-pointer"
-              sx={{ color: `${active === link.title ? "text" : "textSecondary"}` }}
-              onClick={() => setActive(link.title)}
+            <img
+              src={logo}
+              alt="logo"
+              className='sm:w-[50px] sm:h-50[px] w-[40px] h-40[px] object-contain'
+            />
+            <p
+              className={`text-[24px] ml-[10px] font-bold coursor-pointer flex`}
+              sx={{ color: "textPrimary" }}
             >
-              <ScrollLink
-                activeClass="active"
-                to={link.id}
-                spy={true}
-                smooth={true}
-                offset={-100} // Adjust this offset based on your layout
-                duration={100}
-              >{link.title}</ScrollLink>
-            </li>
-          )}
-        </ul>
-        <ul className='list-none flex flex-row '>
+              Tomasz Hawro
+            </p>
+          </Link>
           {socials.map((url, index) => (
-            <li
-              className="mx-2 font-medium cursor-pointer"
-            >
+
+            <li className={`ml-[${index === 0 ? '10' : '10'}px] mr-[${index === socials.length - 1 ? '0' : '10'}px] cursor-pointer flex items-center`}>
               <a
                 key={`social-${index}`}
-                className='object-contain cursor-pointer'
-                // sx={{ background: "backgroundPrimary" }}
                 onClick={(e) => {
                   e.preventDefault()
                   window.open(url.url, "_blank")
                 }}
-
               >
                 <url.icon
-                  className='w-[30px] h-[30px] object-contain cursor-pointer'
-                  fill={`${isDark ? 'white' : 'black'}`}
-
+                  className="cursor-pointer"
+                  fill={getThemeColor(isDark, "textPrimary")}
+                  width={iconSize}
+                  height={iconSize}
                 />
               </a>
             </li>
           ))}
-          <li
-            className='mx-2 hidden md:block cursor-pointer w-[30px] h-[30px]'
-          >
-            <ModeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
-          </li>
         </ul>
+
+        <nav className='main-nav'>
+          <ul className='list-none hidden md:flex flex-row '>
+            <li
+              className="ml-[0px] mr-[10px] list-none flex-row cursor-pointer"
+            >
+              <ModeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
+            </li>
+            {navLinks.map((link, index) =>
+              <li
+                key={link.id}
+                className={`ml-[20px] mr-[${index === navLinks.length - 1 ? '0' : '20'}px] cursor-pointer flex items-center`}
+              >
+                <ScrollLink
+                  activeClass="active"
+                  to={link.id}
+                  spy={true}
+                  smooth={true}
+                  offset={-100} // Adjust this offset based on your layout
+                  duration={100}
+                  onClick={() => setActive(link.title)}
+                >
+                  <span
+                    sx={{ color: `${active === link.title ? "textSecondary" : "textPrimary"}` }}
+                    className='text-[${fontSize}] font-medium'
+                  >
+                    {link.title}
+                  </span>
+                </ScrollLink>
+              </li>
+            )}
+
+          </ul>
+
+        </nav>
         <div className='md:hidden'>
           <Menu
             open={open}
@@ -125,7 +139,7 @@ const Navbar = ({ toggleTheme }) => {
           <Burger open={open} setOpen={setOpen} isDark={isDark} />
         </div>
       </div>
-    </nav>
+    </header>
   );
 };
 

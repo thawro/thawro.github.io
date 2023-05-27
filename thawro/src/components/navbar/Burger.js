@@ -4,7 +4,7 @@ import React from 'react';
 import { StyledBurger } from './Burger.styled';
 
 const Burger = ({ open, setOpen }) => {
-    const bg = { background: 'text' }
+    const bg = { background: 'textPrimary' }
     return (
         <div className='flex justify-center items-center'>
             <StyledBurger

@@ -1,47 +1,55 @@
-// TODO
+function hexToRgba(hex, alpha) {
+    hex = hex.replace('#', '');
+
+    if (!/^[0-9A-F]{6}$/i.test(hex)) {
+        throw new Error('Invalid hexadecimal color code.');
+    }
+
+    var r = parseInt(hex.substring(0, 2), 16);
+    var g = parseInt(hex.substring(2, 4), 16);
+    var b = parseInt(hex.substring(4, 6), 16);
+
+    return 'rgba(' + r + ',' + g + ',' + b + ',' + alpha + ')';
+}
+
+
+
 const lightTheme = {
     colors: {
-        text: "black",
         textPrimary: "black",
-        textSecondary: "black",
-        textTertiary: "black",
+        textSecondary: "#3E3D48",
+        textTertiary: "#AA6719",
 
         backgroundPrimary: "white",
-        backgroundSecondary: "#aaa6c3",
-        backgroundTertiary: "#baaac3",
-        feedbacksBackground: "#bacdc3",
-        feedbackCardBackground: "#bbfdc3",
+        backgroundSecondary: "#6DE2E8",
         popupOverlayBackground: 'rgba(128, 128, 128, 0.5)',
-        popupContentBackground: 'white',
-        toggleMenuBackground: "linear-gradient(to right, white, grey)",
 
-        hero: "rgba(145, 94, 255, 1.0)",
-        heroLine: "linear-gradient(to bottom, rgba(145, 94, 255, 1.0), rgba(145, 94, 255, 0.0));",
+        heroLine: `linear-gradient(to bottom, ${hexToRgba('#AA6719', 1)}, ${hexToRgba('#AA6719', 0)})`,
+
 
     },
 };
 
 const darkTheme = {
     colors: {
-        text: "white",
-        textPrimary: "#050816",
-        textSecondary: "#aaa6c3",
-        textTertiary: "#f3f3f3",
+        textPrimary: "#f3f3f3",
+        textSecondary: "#FB9626",
+        textTertiary: "rgba(0, 201, 212, 1.0)",
 
-        backgroundPrimary: "#080d1c",
-        backgroundSecondary: "#08011c",
-        backgroundTertiary: "#151030",
-        feedbacksBackground: "#100d25",
-        feedbackCardBackground: "#090325",
+        backgroundPrimary: "#222",
+        backgroundSecondary: "#0B091A",
         popupOverlayBackground: 'rgba(255, 255, 255, 0.5)',
-        popupContentBackground: 'rgba(0, 0, 0, 1.0)',
-        toggleMenuBackground: "linear-gradient(to right, #434343, #000000)",
 
-        hero: "rgba(145, 94, 255, 1.0)",
-        heroLine: "linear-gradient(to bottom, rgba(145, 94, 255, 1.0), rgba(145, 94, 255, 0.0))",
+        heroLine: "linear-gradient(to bottom, rgba(0, 201, 212, 1.0), rgba(0, 201, 212, 0.0))",
 
     },
 };
 
 
-export { lightTheme, darkTheme }
+function getThemeColor(isDark, name) {
+    var theme = isDark ? darkTheme : lightTheme
+    return theme.colors[name]
+}
+
+
+export { lightTheme, darkTheme, getThemeColor }

@@ -21,12 +21,12 @@ const ServiceCard = ({ index, title, icon }) => {
             speed: 450
           }}
           className='rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-          sx={{ backgroundColor: "backgroundTertiary" }}
+          sx={{ backgroundColor: "backgroundSecondary" }}
         >
           <img src={icon} alt={title} className='w-20 h-20 object-containt' />
           <h3
-            className='text-[20px] font-bold text-center'
-            sx={{ color: "text" }}
+            className='text-[24px] font-bold text-center'
+            sx={{ color: "textPrimary" }}
           >
             {title}
           </h3>
@@ -43,17 +43,17 @@ const About = () => {
     <div id="about">
       <p
         className="sm:text-[18px] text-[14px] uppercase tracking-wider"
-        sx={{ color: "textSecondary" }}
+        sx={{ color: "textPrimary" }}
       >
         Introduction</p>
       <h2
         className={styles.sectionHeadText}
-        sx={{ color: "text" }}
+        sx={{ color: "textTertiary" }}
       >
         Overview.</h2>
       <div
         className='mt-4 text-[17px] max-w-3xl leading-[30px]'
-        sx={{ color: "textSecondary" }}
+        sx={{ color: "textPrimary" }}
       >
         I finished Bachelor's degree in Biomedical Engineering and
         Master's degree in Artificial Intelligence both with 5.5 grade (A+).

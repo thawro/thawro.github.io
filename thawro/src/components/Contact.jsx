@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 
 const Contact = () => {
+
   const formRef = useRef()
   const [form, setForm] = useState({
     name: '',
@@ -55,17 +56,17 @@ const Contact = () => {
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden justify-center">
       <div
         className="flex-[0.75] p-8 rounded-2xl"
-        sx={{ background: "feedbacksBackground" }}
+        sx={{ background: "backgroundSecondary" }}
       >
         <p
           className={styles.sectionSubText}
-          sx={{ color: "textSecondary" }}
+          sx={{ color: "textPrimary" }}
         >
           Get in touch
         </p>
         <h3
           className={styles.sectionHeadText}
-          sx={{ color: "text" }}
+          sx={{ color: "textTertiary" }}
         >
           Contact.
         </h3>
@@ -78,7 +79,7 @@ const Contact = () => {
           <label className="flex flex-col">
             <span
               className="font-medium mb-4"
-              sx={{ color: "text" }}
+              sx={{ color: "textPrimary" }}
             >
               Your Name
             </span>
@@ -88,50 +89,48 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
-              className="py-4 px-6
-                placeholder:text-secondary
-                text-white rounded-lg outline-none
-                border-none font-medium"
-              sx={{ background: "backgroundTertiary" }}
+              className="py-4 px-6 rounded-lg outline-none border-none font-medium"
+              sx={{ background: "backgroundPrimary", color: "textPrimary" }}
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Email</span>
+            <span
+              className="font-medium mb-4"
+              sx={{ color: "textPrimary" }}
+            >
+              Your Email
+            </span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
-              className="py-4 px-6
-                placeholder:text-secondary
-                text-white rounded-lg outline-none
-                border-none font-medium"
-              sx={{ background: "backgroundTertiary" }}
+              className="py-4 px-6 rounded-lg outline-none border-none font-medium"
+              sx={{ background: "backgroundPrimary", color: "textPrimary" }}
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
+            <span
+              className="font-medium mb-4"
+              sx={{ color: "textPrimary" }}
+            >
+              Your Message
+            </span>
             <textarea
               rows="7"
               name="message"
               value={form.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
-              className="py-4 px-6
-                placeholder:text-secondary
-                text-white rounded-lg outline-none
-                border-none font-medium"
-              sx={{ background: "backgroundTertiary" }}
-
+              className={`py-4 px-6 rounded-lg outline-none border-none font-medium`}
+              sx={{ background: "backgroundPrimary", color: "textPrimary" }}
             />
           </label>
           <button
             type="submit"
-            className="py-3 px-8 outline-none 
-            w-fit text-white font-bold 
-            shadow-md shadow-primary rounded-xl"
-            sx={{ background: "backgroundTertiary" }}
+            className="py-3 px-8 outline-none w-fit font-bold shadow-md shadow-primary rounded-xl"
+            sx={{ background: "backgroundPrimary", color: "textPrimary" }}
           >
             {loading ? 'Sending...' : 'Send'}
           </button>

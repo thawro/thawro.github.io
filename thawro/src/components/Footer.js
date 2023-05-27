@@ -6,10 +6,17 @@ import { flaticonRefs } from "../constants"
 
 const Footer = () => {
     return (
-        <ul className="mt-10 flex-row flex justify-center gap-10">
+        <ul className="flex-row flex gap-[10px]">
             {flaticonRefs.map((icon_ref, index) => (
-                <li key={`flaticon-${index}`} className="font-light text-slate-500 text-[10px]">
-                    <a href={icon_ref.href} title={icon_ref.title} > {icon_ref.text}</a>
+                <li key={`flaticon-${index}`}>
+                    <a href={icon_ref.href} title={icon_ref.title} className="leading-tight" >
+                        <span
+                            className="font-light text-[10px] leading-tight"
+                            sx={{ color: "textPrimary" }}
+                        >
+                            {icon_ref.text}
+                        </span>
+                    </a>
                 </li>
             ))}
         </ul>

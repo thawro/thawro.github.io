@@ -11,7 +11,7 @@ export const StyledMenu = styled.nav`
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 0.3s linear;
+  transition: all 0.4s linear;
   opacity: ${({ open }) => open ? '1' : '0'};\
   transform: ${({ open }) => open ? 'translateX(0%)' : 'translateX(100%)'};
   

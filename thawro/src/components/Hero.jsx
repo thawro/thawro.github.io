@@ -15,7 +15,7 @@ const Hero = () => {
         <div className='flex flex-col justify-center items-center mt-5'>
           <div
             className='w-5 h-5 rounded-full'
-            sx={{ background: "hero" }}
+            sx={{ background: "textTertiary" }}
           />
           <div
             className='w-1 sm:h-80 h-40'
@@ -26,13 +26,13 @@ const Hero = () => {
         <div>
           <h1
             className={styles.heroHeadText}
-            sx={{ color: "text" }}
+            sx={{ color: "textPrimary" }}
           >
-            Hi, I'm <span sx={{ color: "hero" }}>Tomasz</span>
+            Hi, I'm <span sx={{ color: "textTertiary" }}>Tomasz</span>
           </h1>
           <p
             className={`${styles.heroSubText} mt-2`}
-            sx={{ color: "textTertiary" }}
+            sx={{ color: "textPrimary" }}
           >
             I develop Machine Learning models for
             <br className='sm:block hidden' />
@@ -53,7 +53,7 @@ const Hero = () => {
           offset={-100} // Adjust this offset based on your layout
           duration={100}
           className='z-1 cursor-pointer w-[35px] h-[64px] rounded-3xl border-4 flex justify-center items-start p-2'
-          sx={{ borderColor: "textSecondary" }}
+          sx={{ borderColor: "textPrimary" }}
         >
           <motion.div
             animate={{
@@ -65,7 +65,7 @@ const Hero = () => {
               repeatType: "loop",
             }}
             className='w-3 h-3 rounded-full mb-1'
-            sx={{ background: "textSecondary" }}
+            sx={{ background: "textPrimary" }}
           />
         </Link>
       </div>

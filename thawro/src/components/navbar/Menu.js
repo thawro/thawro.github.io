@@ -19,7 +19,7 @@ const Menu = ({ open, setOpen, active, setActive, navLinks, modeSwitcher }) => {
     return (
         <StyledMenu
             open={open}
-            sx={{ background: "backgroundSecondary" }}
+            sx={{ background: "backgroundPrimary" }}
             className='flex items-center'
         >
             <ul className='list-none flex justify-center items-center flex-col'>
@@ -40,8 +40,8 @@ const Menu = ({ open, setOpen, active, setActive, navLinks, modeSwitcher }) => {
                             }}
                         >
                             <span
-                                className="font-poppins text-[2rem] font-bold"
-                                sx={{ color: `${active === link.title ? "text" : "textSecondary"}` }}
+                                className="text-[2rem] font-bold"
+                                sx={{ color: `${active === link.title ? "textSecondary" : "textPrimary"}` }}
                             >
                                 {link.title}
                             </span>
@@ -50,7 +50,10 @@ const Menu = ({ open, setOpen, active, setActive, navLinks, modeSwitcher }) => {
                     </li>
                 ))}
                 <li className='w-full flex items-center justify-center px-6 py-4 cursor-pointer '>
-                    <div className='w-[2rem] h-[2rem]'>
+                    <div
+                        className='w-[2rem] h-[2rem]'
+
+                    >
                         {modeSwitcher}
                     </div>
                 </li>

@@ -38,7 +38,7 @@ const ProjectInfo = ({ github_name, app_url }) => {
       <hr />
       <h1
         className={`font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 text-center`}
-        sx={{ color: "text" }}
+        sx={{ color: "textPrimary" }}
       >
         Demo
       </h1>
@@ -76,7 +76,7 @@ const ProjectCard = ({ index, project }) => {
 
       <div
         className='cursor-pointer p-5 rounded-2xl sm:w-[360px] w-full'
-        sx={{ background: "backgroundTertiary" }}
+        sx={{ background: "backgroundSecondary" }}
         onClick={(openModal)}
       >
         <div className='relative w-full h-[230px]'>
@@ -90,13 +90,13 @@ const ProjectCard = ({ index, project }) => {
         <div className='mt-5'>
           <h3
             className='font-bold text-[24px]'
-            sx={{ color: "text" }}
+            sx={{ color: "textSecondary" }}
           >
             {name}
           </h3>
           <p
             className='mt-2 text-[14px]'
-            sx={{ color: "textSecondary" }}
+            sx={{ color: "textPrimary" }}
           >
             {description}
           </p>
@@ -156,13 +156,13 @@ const Projects = () => {
       <div>
         <p
           className={styles.sectionSubText}
-          sx={{ color: "textSecondary" }}
+          sx={{ color: "textPrimary" }}
         >
           My work
         </p>
         <h2
           className={styles.sectionHeadText}
-          sx={{ color: "text" }}
+          sx={{ color: "textTertiary" }}
         >
           Projects.
         </h2>
@@ -170,7 +170,7 @@ const Projects = () => {
       <div className='w-full flex'>
         <p
           className='mt-3 text-[17px] max-w-3xl leading-[30px]'
-          sx={{ color: "textSecondary" }}
+          sx={{ color: "textPrimary" }}
         >
           The Following projects show my skills as ML engineer.
           Each project is briefly described with links to code

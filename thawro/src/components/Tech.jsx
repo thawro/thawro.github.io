@@ -32,8 +32,8 @@ const TechBadge = ({ index, name, icon }) => {
           <span
             className={`absolute cursor-default ${showText ? 'opacity-100 scale-[125%]' : 'opacity-0'}  
               drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]
-              transition duration-500 text-[18px] font-bold`}
-            sx={{ color: "text" }}
+              transition duration-500 text-[24px] font-bold`}
+            sx={{ color: "textPrimary" }}
           >
             {name}
           </span>
@@ -49,13 +49,13 @@ const Tech = () => {
       <div>
         <p
           className={styles.sectionSubText}
-          sx={{ color: "textSecondary" }}
+          sx={{ color: "textPrimary" }}
         >
           Which technologies do I use?
         </p>
         <h2
           className={styles.sectionHeadText}
-          sx={{ color: "text" }}
+          sx={{ color: "textTertiary" }}
         >
           Tech stack.
         </h2>
