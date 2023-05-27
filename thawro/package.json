@@ -27,6 +27,7 @@
     "react-syntax-highlighter": "^15.5.0",
     "react-vertical-timeline-component": "^3.6.0",
     "remark-gfm": "^3.0.1",
+    "styled-components": "^5.3.11",
     "theme-ui": "^0.15.7",
     "three": "^0.152.2",
     "web-vitals": "^2.1.4"
@@ -58,9 +59,16 @@
     ]
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.0.1",
     "autoprefixer": "^10.4.14",
+    "file-loader": "^6.2.0",
     "gh-pages": "^5.0.0",
+    "html-webpack-plugin": "^5.5.1",
     "postcss": "^8.4.23",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.2",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.84.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
   }
 }

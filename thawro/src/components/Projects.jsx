@@ -5,7 +5,7 @@ import { styles } from '../styles'
 import { SectionWrapper } from '../hoc'
 import { projects } from '../constants'
 import Markdown from './Markdown'
-import { github } from "../assets";
+import { GitHub } from "../assets";
 import PopUpWindow from './PopUpWindow'
 
 
@@ -64,7 +64,7 @@ const ProjectCard = ({ index, project }) => {
   const urls = [
     {
       url: `https://github.com/thawro/${github_name}`,
-      icon: github
+      icon: GitHub
     },
     {
       url: app_url,
@@ -116,15 +116,13 @@ const ProjectCard = ({ index, project }) => {
                   e.preventDefault()
                   window.open(url.url, "_blank")
                   e.stopPropagation()
-                }
-                }
+                }}
                 className='glass border-[1px] border-solid mx-1 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
                 sx={{ borderColor: "backgroundSecondary" }}
               >
-                <img
-                  src={url.icon}
-                  alt={url.icon}
+                <url.icon
                   className='w-[70%] h-[70%] object-contain pointer-events-none'
+
                 />
               </a>
             ))}
@@ -145,7 +143,7 @@ const ProjectCard = ({ index, project }) => {
           />
         </PopUpWindow>
       </div>
-    </div >
+    </div>
   )
 }
 

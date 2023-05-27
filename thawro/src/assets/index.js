@@ -5,11 +5,13 @@ import researcher from "./about/researcher.svg";
 import data_scientist from "./about/data_scientist.svg";
 import python_developer from "./about/python_developer.svg";
 
-import github from "./github.svg";
-import hugging_face from "./hugging_face.svg";
 import menu from "./menu.svg";
 import close from "./close.svg";
-import linkedin from "./linkedin.svg"
+
+import { ReactComponent as HuggingFace } from "./hugging_face.svg";
+import { ReactComponent as LinkedIn } from "./linkedin.svg"
+import { ReactComponent as GitHub } from "./github.svg"
+
 
 import python from "./tech/python.svg";
 import sklearn from "./tech/sklearn.svg";
@@ -24,8 +26,9 @@ import mlflow from "./tech/mlflow.svg";
 import numpy from "./tech/numpy.svg";
 import wandb from "./tech/wandb.svg";
 
-import sun from "./sun.svg"
-import moon from "./moon.svg"
+import { ReactComponent as Sun } from "./sun.svg"
+import { ReactComponent as Moon } from "./moon.svg"
+
 
 
 import bonasoft from "./company/bonasoft.png";
@@ -39,8 +42,6 @@ export {
   researcher,
   data_scientist,
   ml_engineer,
-  github,
-  hugging_face,
   menu,
   wandb,
   numpy,
@@ -58,7 +59,10 @@ export {
   bonasoft,
   mxlabs,
   flowers_classification,
-  linkedin,
-  sun,
-  moon
+
+  HuggingFace,
+  GitHub,
+  LinkedIn,
+  Sun,
+  Moon
 };
