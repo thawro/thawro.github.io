@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.1ba5760e.css",
-    "main.js": "/static/js/main.5f2e830f.js",
-    "static/js/787.3939298d.chunk.js": "/static/js/787.3939298d.chunk.js",
+    "main.css": "/static/css/main.04cb39be.css",
+    "main.js": "/static/js/main.d8a4ac1e.js",
+    "static/js/651.653b6173.chunk.js": "/static/js/651.653b6173.chunk.js",
     "static/media/flowers_classification.png": "/static/media/flowers_classification.6b7eefbcb580021cb719.png",
-    "static/media/hugging_face.svg": "/static/media/hugging_face.5480133029d31b621ec50fc947ad8382.svg",
+    "static/media/hugging_face.svg": "/static/media/hugging_face.e593e21fb1c5d324805c21027252fe50.svg",
     "static/media/bonasoft.png": "/static/media/bonasoft.ffef4b2782307c34f9fa.png",
     "static/media/researcher.svg": "/static/media/researcher.fba510970d99b830aee5966a20e19f5e.svg",
     "static/media/data_scientist.svg": "/static/media/data_scientist.bf625937997cbb90b3503f7c2f773e77.svg",
@@ -17,25 +17,25 @@
     "static/media/wandb.svg": "/static/media/wandb.d127d4da15aca85bba34d0002429ab32.svg",
     "static/media/mlflow.svg": "/static/media/mlflow.45e0f5f486f1f2e3dba9e2540f279211.svg",
     "static/media/python.svg": "/static/media/python.92d04179be1bb07f39a291cf2bf86408.svg",
-    "static/media/sun.svg": "/static/media/sun.9087b2589198ec8262b62fe35ba47845.svg",
+    "static/media/sun.svg": "/static/media/sun.79d2c519fd61609875f54271465ff9c7.svg",
     "static/media/docker.svg": "/static/media/docker.a2eecd96da9f90e20b8dd2c1d09a1fc3.svg",
     "static/media/close.svg": "/static/media/close.52ab0d39b2c514b8322115c951eac5a2.svg",
     "static/media/menu.svg": "/static/media/menu.acf64a387fc724c7a47a3a0120d5dc52.svg",
     "static/media/numpy.svg": "/static/media/numpy.dae34572550edd6bb6a538aa8dd1b465.svg",
-    "static/media/github.svg": "/static/media/github.78a1e634c4551678cfa4acdb8234030f.svg",
+    "static/media/github.svg": "/static/media/github.edc3b24857ff9047ab8032b9a304ab75.svg",
     "static/media/pytorch.svg": "/static/media/pytorch.9189bc89c46f3a5c93f3ecbd88127211.svg",
     "static/media/matplotlib.svg": "/static/media/matplotlib.a3a9e876bf96ccd5271110dac8098368.svg",
     "index.html": "/index.html",
     "static/media/git.svg": "/static/media/git.43d387b77657117c0e407816cbf72476.svg",
-    "static/media/linkedin.svg": "/static/media/linkedin.27a3f479ca1bbb0ceef19e395081fb94.svg",
-    "static/media/moon.svg": "/static/media/moon.95bb5a3a5c74a95ee0a65736c38e8ce5.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.c02cce8e770ae6f8801411933047e2d3.svg",
+    "static/media/moon.svg": "/static/media/moon.7039da165534bad10e90bade04c7174e.svg",
     "static/media/lightning.svg": "/static/media/lightning.288103cd7b52b5fdfc9643b0eb78dc6c.svg",
-    "main.1ba5760e.css.map": "/static/css/main.1ba5760e.css.map",
-    "main.5f2e830f.js.map": "/static/js/main.5f2e830f.js.map",
-    "787.3939298d.chunk.js.map": "/static/js/787.3939298d.chunk.js.map"
+    "main.04cb39be.css.map": "/static/css/main.04cb39be.css.map",
+    "main.d8a4ac1e.js.map": "/static/js/main.d8a4ac1e.js.map",
+    "651.653b6173.chunk.js.map": "/static/js/651.653b6173.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1ba5760e.css",
-    "static/js/main.5f2e830f.js"
+    "static/css/main.04cb39be.css",
+    "static/js/main.d8a4ac1e.js"
   ]
 }
