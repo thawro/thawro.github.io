@@ -22,7 +22,6 @@ const lightTheme = {
 
 
         backgroundPrimary: "#fff",
-        // backgroundSecondary: "#6DE2E8",
         backgroundSecondary: "#ddd",
         popupOverlayBackground: 'rgba(128, 128, 128, 0.8)',
 

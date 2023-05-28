@@ -76,17 +76,17 @@ const ProjectCard = ({ index, project, isDark }) => {
     }
   ]
   return (
-    <div id={`project-${index}`} className="rounded-lg project-card sm:w-[45%] md:w-[30%]">
+    <div id={`project-${index}`} className=" rounded-3xl project-card lg:w-[30%] md:w-[45%]">
       <div
-        className='cursor-pointer rounded-lg border-[1px]'
+        className='cursor-pointer rounded-3xl border-[1px]'
         onClick={(openModal)}
-        style={{ borderColor: getThemeColor(isDark, "backgroundSecondary") }}
+        style={{ borderColor: getThemeColor(isDark, "popupOverlayBackground") }}
         sx={{ background: "backgroundSecondary" }}
       >
         <img
           src={image}
           alt={image}
-          className='object-cover rounded-t-lg'
+          className='object-cover rounded-t-3xl'
         />
 
         <div className={`p-3`}>

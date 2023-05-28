@@ -17,7 +17,7 @@ const ServiceCard = ({ index, title, icon }) => {
         className='rounded-lg py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
         sx={{ backgroundColor: "backgroundSecondary" }}
       >
-        <img src={icon} alt={title} className='w-[70%] h-[70%] object-containt' />
+        <img src={icon} alt={title} className='w-[120px] h-[120px] object-containt' />
         <h3
           className='text-[24px] font-bold text-center'
           sx={{ color: "textPrimary" }}

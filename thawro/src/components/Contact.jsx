@@ -53,11 +53,8 @@ const Contact = () => {
 
 
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden justify-center">
-      <div
-        className="flex-[0.75] p-8 rounded-2xl"
-        sx={{ background: "backgroundSecondary" }}
-      >
+    <>
+      <div>
         <p
           className={styles.sectionSubText}
           sx={{ color: "textPrimary" }}
@@ -71,72 +68,74 @@ const Contact = () => {
           Contact.
         </h3>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
-        >
-          <label className="flex flex-col">
-            <span
-              className="font-medium mb-4"
-              sx={{ color: "textPrimary" }}
-            >
-              Your Name
-            </span>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your name?"
-              className="py-4 px-6 rounded-lg outline-none border-none font-medium"
-              sx={{ background: "backgroundPrimary", color: "textPrimary" }}
-            />
-          </label>
-          <label className="flex flex-col">
-            <span
-              className="font-medium mb-4"
-              sx={{ color: "textPrimary" }}
-            >
-              Your Email
-            </span>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your email?"
-              className="py-4 px-6 rounded-lg outline-none border-none font-medium"
-              sx={{ background: "backgroundPrimary", color: "textPrimary" }}
-            />
-          </label>
-          <label className="flex flex-col">
-            <span
-              className="font-medium mb-4"
-              sx={{ color: "textPrimary" }}
-            >
-              Your Message
-            </span>
-            <textarea
-              rows="7"
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="What do you want to say?"
-              className={`py-4 px-6 rounded-lg outline-none border-none font-medium`}
-              sx={{ background: "backgroundPrimary", color: "textPrimary" }}
-            />
-          </label>
-          <button
-            type="submit"
-            className="py-3 px-8 contact-button outline-none w-fit font-bold rounded-xl"
-            sx={{ background: "backgroundPrimary", color: "textPrimary" }}
-          >
-            {loading ? 'Sending...' : 'Send'}
-          </button>
-        </form>
       </div>
-    </div>
+
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className={`xl:flex-row flex-col flex gap-10 overflow-hidden justify-center  ${styles.padding} rounded-2xl`}
+        sx={{ background: "backgroundSecondary" }}
+      >
+        <label className="flex flex-col">
+          <span
+            className="font-medium mb-4"
+            sx={{ color: "textPrimary" }}
+          >
+            Your Name
+          </span>
+          <input
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            placeholder="What's your name?"
+            className="py-4 px-6 rounded-lg outline-none border-none font-medium"
+            sx={{ background: "backgroundPrimary", color: "textPrimary" }}
+          />
+        </label>
+        <label className="flex flex-col">
+          <span
+            className="font-medium mb-4"
+            sx={{ color: "textPrimary" }}
+          >
+            Your Email
+          </span>
+          <input
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="What's your email?"
+            className="py-4 px-6 rounded-lg outline-none border-none font-medium"
+            sx={{ background: "backgroundPrimary", color: "textPrimary" }}
+          />
+        </label>
+        <label className="flex flex-col">
+          <span
+            className="font-medium mb-4"
+            sx={{ color: "textPrimary" }}
+          >
+            Your Message
+          </span>
+          <textarea
+            rows="7"
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            placeholder="What do you want to say?"
+            className={`py-4 px-6 rounded-lg outline-none border-none font-medium`}
+            sx={{ background: "backgroundPrimary", color: "textPrimary" }}
+          />
+        </label>
+        <button
+          type="submit"
+          className="py-3 px-8 contact-button outline-none w-fit font-bold rounded-xl"
+          sx={{ background: "backgroundPrimary", color: "textPrimary" }}
+        >
+          {loading ? 'Sending...' : 'Send'}
+        </button>
+      </form>
+    </>
   )
 }
 
