@@ -5,7 +5,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { StyledMenu } from './Menu.styled';
 import { getThemeColor } from '../../theme';
 
-const Menu = ({ open, setOpen, active, setActive, navLinks, modeSwitcher, isDark }) => {
+const Menu = ({ open, setOpen, active, setActive, navLinks, socials, modeSwitcher, isDark, iconSize }) => {
     useEffect(() => {
         if (open) {
             document.body.style.overflow = 'hidden';
@@ -22,11 +22,14 @@ const Menu = ({ open, setOpen, active, setActive, navLinks, modeSwitcher, isDark
             open={open}
             sx={{ background: "backgroundPrimary" }}
             className='flex items-center'
+            onClick={() => {
+                setOpen(!open);
+            }}
         >
             <ul className='list-none flex justify-center items-center flex-col'>
                 {navLinks.map((link) => (
                     <li key={link.id}
-                        className=' cursor-pointer justify-center py-6'
+                        className='cursor-pointer justify-center p-6'
                     >
                         <ScrollLink
                             activeClass="active"
@@ -50,14 +53,32 @@ const Menu = ({ open, setOpen, active, setActive, navLinks, modeSwitcher, isDark
                         </ScrollLink>
                     </li>
                 ))}
-                <li className='w-full flex items-center justify-center px-6 py-4 cursor-pointer '>
-                    <div
-                        className='w-[2rem] h-[2rem]'
-
-                    >
-                        {modeSwitcher}
-                    </div>
+                <li>
+                    <ul className='flex flex-row'>
+                        {socials.map((url, index) => (
+                            <li className="justify-center p-6 cursor-pointer">
+                                <a
+                                    key={`social-${index}`}
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        window.open(url.url, "_blank")
+                                    }}
+                                >
+                                    <url.icon
+                                        className="cursor-pointer"
+                                        fill={getThemeColor(isDark, "textPrimary")}
+                                        width={iconSize}
+                                        height={iconSize}
+                                    />
+                                </a>
+                            </li>
+                        ))}
+                        <li className='justify-center p-6 cursor-pointer'>
+                            {modeSwitcher}
+                        </li>
+                    </ul>
                 </li>
+
             </ul>
             <style>{`
               .nav-item:hover {

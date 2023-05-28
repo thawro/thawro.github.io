@@ -10,8 +10,8 @@ import { useThemeUI } from "theme-ui";
 import Burger from './Burger';
 import Menu from './Menu';
 import { getThemeColor } from '../../theme';
-
-var iconSize = "36px"
+import SectionWrapper from '../../hoc/SectionWrapper';
+const iconSize = 40
 
 const ModeSwitcher = ({ isDark, toggleTheme }) => {
   const props = {
@@ -61,18 +61,17 @@ const Navbar = ({ toggleTheme }) => {
             <img
               src={logo}
               alt="logo"
-              className='sm:w-[50px] sm:h-50[px] w-[40px] h-40[px] object-contain'
+              className='w-[50px] h-50[px] object-contain'
             />
             <p
               className={`text-[24px] ml-[10px] font-bold coursor-pointer flex`}
               sx={{ color: "textPrimary" }}
             >
-              Tomasz Hawro
+              awro
             </p>
           </Link>
           {socials.map((url, index) => (
-
-            <li className={`ml-[${index === 0 ? '10' : '10'}px] mr-[${index === socials.length - 1 ? '0' : '10'}px] cursor-pointer flex items-center`}>
+            <li className={`hidden md:flex ml-[${index === 0 ? '10' : '10'}px] mr-[${index === socials.length - 1 ? '0' : '10'}px] cursor-pointer flex items-center`}>
               <a
                 key={`social-${index}`}
                 onClick={(e) => {
@@ -121,22 +120,21 @@ const Navbar = ({ toggleTheme }) => {
                 </ScrollLink>
               </li>
             )}
-
           </ul>
-
         </nav>
         <div className='md:hidden'>
           <Menu
             open={open}
             setOpen={setOpen}
             navLinks={navLinks}
-            socials={socials}
             active={active}
+            socials={socials}
             setActive={setActive}
             modeSwitcher={<ModeSwitcher isDark={isDark} toggleTheme={toggleTheme} />}
             isDark={isDark}
+            iconSize={iconSize}
           />
-          <Burger open={open} setOpen={setOpen} isDark={isDark} />
+          <Burger open={open} setOpen={setOpen} isDark={isDark} iconSize={iconSize} />
         </div>
       </div>
       <style>{`
