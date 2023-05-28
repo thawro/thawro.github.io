@@ -114,7 +114,7 @@ const Navbar = ({ toggleTheme }) => {
                 >
                   <span
                     sx={{ color: `${active === link.title ? "textSecondary" : "textPrimary"}` }}
-                    className='text-[${fontSize}] font-medium'
+                    className='nav-item text-[${fontSize}] font-medium'
                   >
                     {link.title}
                   </span>
@@ -134,10 +134,16 @@ const Navbar = ({ toggleTheme }) => {
             active={active}
             setActive={setActive}
             modeSwitcher={<ModeSwitcher isDark={isDark} toggleTheme={toggleTheme} />}
+            isDark={isDark}
           />
           <Burger open={open} setOpen={setOpen} isDark={isDark} />
         </div>
       </div>
+      <style>{`
+              .nav-item:hover {
+                color: ${getThemeColor(isDark, "textSecondary")}
+              }
+      `}</style>
     </header>
   );
 };

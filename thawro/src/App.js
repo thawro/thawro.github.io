@@ -44,10 +44,6 @@ const App = ({ setTheme }) => {
         <Tech />
         <Projects />
         {/* <Feedbacks /> */}
-        {/* <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div> */}
         <Contact />
 
         <Footer />

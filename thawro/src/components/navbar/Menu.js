@@ -3,8 +3,9 @@ import React, { useEffect } from 'react';
 
 import { Link as ScrollLink } from "react-scroll";
 import { StyledMenu } from './Menu.styled';
+import { getThemeColor } from '../../theme';
 
-const Menu = ({ open, setOpen, active, setActive, navLinks, modeSwitcher }) => {
+const Menu = ({ open, setOpen, active, setActive, navLinks, modeSwitcher, isDark }) => {
     useEffect(() => {
         if (open) {
             document.body.style.overflow = 'hidden';
@@ -40,7 +41,7 @@ const Menu = ({ open, setOpen, active, setActive, navLinks, modeSwitcher }) => {
                             }}
                         >
                             <span
-                                className="text-[2rem] font-bold"
+                                className="nav-item text-[2rem] font-bold"
                                 sx={{ color: `${active === link.title ? "textSecondary" : "textPrimary"}` }}
                             >
                                 {link.title}
@@ -58,6 +59,11 @@ const Menu = ({ open, setOpen, active, setActive, navLinks, modeSwitcher }) => {
                     </div>
                 </li>
             </ul>
+            <style>{`
+              .nav-item:hover {
+                color: ${getThemeColor(isDark, "textSecondary")}
+              }
+      `}</style>
 
         </StyledMenu>
     )
