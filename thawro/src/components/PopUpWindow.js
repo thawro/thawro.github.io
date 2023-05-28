@@ -43,9 +43,9 @@ const PopUpWindow = ({ isOpen, onClose, children }) => {
     };
 
     const contentStyle = {
-        maxWidth: '90vw',
-        maxHeight: '80vh',
-        margin: '10vh 5vw',
+        maxWidth: '92vw',
+        maxHeight: '92vh',
+        margin: '4vh 4vw',
         overflow: 'auto',
         padding: '15px 30px',
         borderRadius: '15px',
@@ -59,12 +59,12 @@ const PopUpWindow = ({ isOpen, onClose, children }) => {
         >
             <div
                 style={contentStyle}
-                sx={{ background: "backgroundSecondary" }}
+                sx={{ background: "backgroundPrimary" }}
             >
                 <CgClose
                     onClick={onClose}
                     className="float-right cursor-pointer text-[50px]"
-                    sx={{ color: "text" }}
+                    sx={{ color: "textPrimary" }}
                 />
                 {children}
             </div>

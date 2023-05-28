@@ -12,7 +12,6 @@ import Menu from './Menu';
 import { getThemeColor } from '../../theme';
 
 var iconSize = "36px"
-var fontSize = "20px"
 
 const ModeSwitcher = ({ isDark, toggleTheme }) => {
   const props = {

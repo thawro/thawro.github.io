@@ -52,10 +52,10 @@ const Markdown = ({ markdown }) => {
         />
         <style>{`
         h1{
-            color: ${getThemeColor(isDark, "textSecondary")}
+            color: ${getThemeColor(isDark, "textPrimary")}
         }
         a{
-            color: ${getThemeColor(isDark, "textTertiary")}
+            color: ${getThemeColor(isDark, "textSecondary")}
         }
         `}</style>
     </div>

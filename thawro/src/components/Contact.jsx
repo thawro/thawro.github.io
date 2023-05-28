@@ -129,7 +129,7 @@ const Contact = () => {
           </label>
           <button
             type="submit"
-            className="py-3 px-8 outline-none w-fit font-bold shadow-md shadow-primary rounded-xl"
+            className="py-3 px-8 contact-button outline-none w-fit font-bold rounded-xl"
             sx={{ background: "backgroundPrimary", color: "textPrimary" }}
           >
             {loading ? 'Sending...' : 'Send'}

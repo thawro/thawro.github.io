@@ -7,7 +7,8 @@ import { projects } from '../constants'
 import Markdown from './Markdown'
 import { GitHub } from "../assets";
 import PopUpWindow from './PopUpWindow'
-
+import { useThemeUI } from "theme-ui";
+import { getThemeColor } from "../theme";
 
 const ProjectInfo = ({ github_name, app_url }) => {
   const markdown_url = `https://raw.githubusercontent.com/thawro/${github_name}/main/INFO.md`
@@ -37,7 +38,7 @@ const ProjectInfo = ({ github_name, app_url }) => {
       <Markdown markdown={markdown} />
       <hr />
       <h1
-        className={`font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 text-center`}
+        className={`lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 text-center`}
         sx={{ color: "textPrimary" }}
       >
         Demo
@@ -49,9 +50,12 @@ const ProjectInfo = ({ github_name, app_url }) => {
 
 
 
-const ProjectCard = ({ index, project }) => {
+const ProjectCard = ({ index, project, isDark }) => {
   const { name, description, tags, image, github_name, app_url, app_icon } = project
   const [isOpen, setIsOpen] = useState(false);
+
+  var c = isDark ? 255 : 50
+  var rgb = `${c}, ${c}, ${c}`
 
   async function openModal() {
     setIsOpen(true);
@@ -72,25 +76,23 @@ const ProjectCard = ({ index, project }) => {
     }
   ]
   return (
-    <div id={`project-${index}`}>
-
+    <div id={`project-${index}`} className="rounded-lg project-card sm:w-[45%] md:w-[30%]">
       <div
-        className='cursor-pointer p-5 rounded-2xl sm:w-[360px] w-full'
-        sx={{ background: "backgroundSecondary" }}
+        className='cursor-pointer rounded-lg border-[1px]'
         onClick={(openModal)}
+        style={{ borderColor: getThemeColor(isDark, "backgroundSecondary") }}
+        sx={{ background: "backgroundSecondary" }}
       >
-        <div className='relative w-full h-[230px]'>
-          <img
-            src={image}
-            alt={image}
-            className='w-full h-full object-cover rounded-2xl'
-          />
+        <img
+          src={image}
+          alt={image}
+          className='object-cover rounded-t-lg'
+        />
 
-        </div>
-        <div className='mt-5'>
+        <div className={`p-3`}>
           <h3
             className='font-bold text-[24px]'
-            sx={{ color: "textSecondary" }}
+            sx={{ color: "textPrimary" }}
           >
             {name}
           </h3>
@@ -100,35 +102,45 @@ const ProjectCard = ({ index, project }) => {
           >
             {description}
           </p>
-        </div>
-        <div className='w-full flex justify-between'>
-          <div className='mt-4 flex flex-wrap gap-2'>
-            {tags.map((tag, index) => (
-              <p key={tag.name} className={`text-[14px] ${tag.color}`}>#{tag.name}</p>
-            ))}
-          </div>
-          <div className='inset-0 flex justify-end m-3'>
-            {urls.map((url, index) => (
-              <a
-                key={`url-${index}`}
-                href={url.url}
-                onClick={(e) => {
-                  e.preventDefault()
-                  window.open(url.url, "_blank")
-                  e.stopPropagation()
-                }}
-                className='glass border-[1px] border-solid mx-1 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-                sx={{ borderColor: "backgroundSecondary" }}
-              >
-                <url.icon
-                  className='w-[70%] h-[70%] object-contain pointer-events-none'
+          <div className='flex justify-between'>
+            <div className='mt-4 flex flex-wrap gap-2'>
+              {tags.map((tag, index) => (
+                <p
+                  key={tag.name}
+                  className="text-[14px]"
+                  sx={{ color: "textSecondary" }}
+                >
+                  #{tag.name}
+                </p>
+              ))}
+            </div>
+            <div className='inset-0 flex justify-end m-3'>
+              {urls.map((url, index) => (
+                <a
+                  key={`url-${index}`}
+                  href={url.url}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    window.open(url.url, "_blank")
+                    e.stopPropagation()
+                  }}
+                  className='glass mx-1 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                  // sx={{ borderColor: "backgroundPrimary" }}
+                  style={{
+                    backgroundImage: `linear-gradient(to right, rgba(${rgb}, 0.15), rgba(${rgb}, 0.4), rgba(${rgb}, 0.15))`
+                  }}
+                >
+                  <url.icon
+                    className='w-[70%] h-[70%] object-contain pointer-events-none'
 
-                />
-              </a>
-            ))}
+                  />
+                </a>
+              ))}
 
+            </div>
           </div>
         </div>
+
 
       </div>
       <div>
@@ -143,6 +155,13 @@ const ProjectCard = ({ index, project }) => {
           />
         </PopUpWindow>
       </div>
+      <style>
+        {`
+        .glass:hover {
+          box-shadow: 0 0 0.75rem rgba(${rgb}, 0.7);
+        }
+        `}
+      </style>
     </div>
   )
 }
@@ -151,6 +170,9 @@ const ProjectCard = ({ index, project }) => {
 
 
 const Projects = () => {
+  const context = useThemeUI()
+  var isDark = context.colorMode === "dark"
+
   return (
     <>
       <div>
@@ -179,9 +201,9 @@ const Projects = () => {
           and manage projects effectively. Click on the project card to see more.
         </p>
       </div>
-      <div className='mt-20 flex flex-wrap gap-7 justify-center' id='projects-cards'>
+      <div className='mt-20 flex flex-wrap gap-10 justify-center' id='projects-cards'>
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} project={project} />
+          <ProjectCard key={`project-${index}`} index={index} project={project} isDark={isDark} />
         ))}
       </div>
     </>

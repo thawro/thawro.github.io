@@ -3,36 +3,35 @@ import React from "react";
 
 import { styles } from '../styles'
 import { services } from '../constants'
-import { fadeIn } from '../utils/motion'
 import { SectionWrapper } from '../hoc';
+import { useThemeUI } from "theme-ui";
 
 
 const ServiceCard = ({ index, title, icon }) => {
-  return (
-    <div className="xs:w-[250px] w-full">
-      <div
-        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
-      >
-        <div
-          options={{
-            max: 45,
-            scale: 1,
-            speed: 450
-          }}
-          className='rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-          sx={{ backgroundColor: "backgroundSecondary" }}
-        >
-          <img src={icon} alt={title} className='w-20 h-20 object-containt' />
-          <h3
-            className='text-[24px] font-bold text-center'
-            sx={{ color: "textPrimary" }}
-          >
-            {title}
-          </h3>
-        </div>
+  const context = useThemeUI()
+  var isDark = context.colorMode === "dark"
 
+  return (
+    <div className="xs:w-[250px] w-full green-pink-gradient p-[1px] rounded-lg shadowed-card">
+      <div
+        className='rounded-lg py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+        sx={{ backgroundColor: "backgroundSecondary" }}
+      >
+        <img src={icon} alt={title} className='w-[70%] h-[70%] object-containt' />
+        <h3
+          className='text-[24px] font-bold text-center'
+          sx={{ color: "textPrimary" }}
+        >
+          {title}
+        </h3>
       </div>
+      <style>{`
+      .shadowed-card {
+        --tw-shadow: 0px 15px 40px -15px ${isDark ? "#444" : '#444'};
+        --tw-shadow-colored: 0px 35px 120px -15px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+      `}</style>
     </div>
   )
 }

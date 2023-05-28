@@ -6,8 +6,6 @@ export const StyledBurger = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 30px;
-  height: 30px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -19,7 +17,6 @@ export const StyledBurger = styled.button`
   }
   
   span {
-    width: 100%;
     height: ${lineHeight}px;
     border-radius: 10px;
     transition: all 0.3s linear;
@@ -37,7 +34,6 @@ export const StyledBurger = styled.button`
   }
 
   .burger-middle div {
-    width: 100%;
     height: ${lineHeight}px;
     position: absolute;
     top: -${lineHeight / 2}px;
