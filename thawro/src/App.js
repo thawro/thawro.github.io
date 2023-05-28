@@ -44,11 +44,14 @@ const App = ({ setTheme }) => {
         <Tech />
         <Projects />
         {/* <Feedbacks /> */}
-        <div className="relative z-0">
+        {/* <div className="relative z-0">
           <Contact />
           <StarsCanvas />
-        </div>
+        </div> */}
+        <Contact />
+
         <Footer />
+
       </div>
     </BrowserRouter>
     // </ThemeProvider>

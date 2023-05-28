@@ -73,7 +73,7 @@ const Contact = () => {
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className={`xl:flex-row flex-col flex gap-10 overflow-hidden justify-center  ${styles.padding} rounded-2xl`}
+        className={`flex-col flex gap-10 overflow-hidden justify-center  ${styles.padding} rounded-2xl`}
         sx={{ background: "backgroundSecondary" }}
       >
         <label className="flex flex-col">
