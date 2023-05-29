@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.627aea40.css",
-    "main.js": "/static/js/main.d7658d52.js",
+    "main.css": "/static/css/main.f37be6f0.css",
+    "main.js": "/static/js/main.6931df97.js",
     "static/js/651.653b6173.chunk.js": "/static/js/651.653b6173.chunk.js",
     "static/media/flowers_classification.png": "/static/media/flowers_classification.6b7eefbcb580021cb719.png",
     "static/media/hugging_face.svg": "/static/media/hugging_face.e593e21fb1c5d324805c21027252fe50.svg",
@@ -23,19 +23,19 @@
     "static/media/menu.svg": "/static/media/menu.acf64a387fc724c7a47a3a0120d5dc52.svg",
     "static/media/numpy.svg": "/static/media/numpy.dae34572550edd6bb6a538aa8dd1b465.svg",
     "static/media/github.svg": "/static/media/github.1f9116d4ee5e2f617c0e5a996cc5dab1.svg",
+    "index.html": "/index.html",
     "static/media/pytorch.svg": "/static/media/pytorch.9189bc89c46f3a5c93f3ecbd88127211.svg",
     "static/media/matplotlib.svg": "/static/media/matplotlib.a3a9e876bf96ccd5271110dac8098368.svg",
-    "index.html": "/index.html",
     "static/media/git.svg": "/static/media/git.43d387b77657117c0e407816cbf72476.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.64234824a3c8995bed0c06092e300bae.svg",
     "static/media/moon.svg": "/static/media/moon.fdccb44c3bb86085fcaccf8528a0ecaf.svg",
     "static/media/lightning.svg": "/static/media/lightning.288103cd7b52b5fdfc9643b0eb78dc6c.svg",
-    "main.627aea40.css.map": "/static/css/main.627aea40.css.map",
-    "main.d7658d52.js.map": "/static/js/main.d7658d52.js.map",
+    "main.f37be6f0.css.map": "/static/css/main.f37be6f0.css.map",
+    "main.6931df97.js.map": "/static/js/main.6931df97.js.map",
     "651.653b6173.chunk.js.map": "/static/js/651.653b6173.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.627aea40.css",
-    "static/js/main.d7658d52.js"
+    "static/css/main.f37be6f0.css",
+    "static/js/main.6931df97.js"
   ]
 }
