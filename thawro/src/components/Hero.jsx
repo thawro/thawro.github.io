@@ -34,9 +34,7 @@ const Hero = () => {
             className={`${styles.heroSubText} mt-2`}
             sx={{ color: "textPrimary" }}
           >
-            I develop Machine Learning models for
-            <br className='sm:block hidden' />
-            various tasks.
+            I develop Machine Learning models for various tasks.
           </p>
         </div>
       </div>
