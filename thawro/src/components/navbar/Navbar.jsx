@@ -21,7 +21,7 @@ const ModeSwitcher = ({ isDark, toggleTheme }) => {
   }
   return <div
     onClick={toggleTheme}
-    className='p-2'
+    className='p-2 nav-item'
     title={`Switch to ${isDark ? "dark" : "light"} theme`}
   >
     {isDark ?
@@ -84,10 +84,10 @@ const Navbar = ({ toggleTheme }) => {
                   e.preventDefault()
                   window.open(url.url, "_blank")
                 }}
-                className='p-2'
+                className='p-2 '
               >
                 <url.icon
-                  className="cursor-pointer"
+                  className="cursor-pointer nav-item"
                   fill={getThemeColor(isDark, "textPrimary")}
                   width={iconSize}
                   height={iconSize}

@@ -69,7 +69,7 @@ const Menu = ({ open, setOpen, active, setActive, navLinks, socials, modeSwitche
 
                                 >
                                     <url.icon
-                                        className="cursor-pointer"
+                                        className="cursor-pointer nav-item"
                                         fill={getThemeColor(isDark, "textPrimary")}
                                         width={iconSize}
                                         height={iconSize}
