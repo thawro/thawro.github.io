@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0a00eb9f.css",
-    "main.js": "/static/js/main.2f7b6e13.js",
+    "main.css": "/static/css/main.3daf3d0f.css",
+    "main.js": "/static/js/main.d180a215.js",
     "static/js/651.653b6173.chunk.js": "/static/js/651.653b6173.chunk.js",
     "static/media/flowers_classification.png": "/static/media/flowers_classification.6b7eefbcb580021cb719.png",
     "static/media/hugging_face.svg": "/static/media/hugging_face.e593e21fb1c5d324805c21027252fe50.svg",
@@ -13,29 +13,29 @@
     "static/media/python_developer.svg": "/static/media/python_developer.eef81261dfbfe5efe8587b42fc1050d3.svg",
     "static/media/sklearn.svg": "/static/media/sklearn.58019548995fd625095879818e7005d2.svg",
     "static/media/plotly.svg": "/static/media/plotly.ffa6cc659a4cab7a224e27300d106e4c.svg",
-    "static/media/logo.svg": "/static/media/logo.709776ef3777992c51084809e51eedd2.svg",
+    "static/media/logo.svg": "/static/media/logo.1c8f4fc3ea21c99d997b268bf66ba786.svg",
     "static/media/wandb.svg": "/static/media/wandb.d127d4da15aca85bba34d0002429ab32.svg",
     "static/media/mlflow.svg": "/static/media/mlflow.45e0f5f486f1f2e3dba9e2540f279211.svg",
     "static/media/python.svg": "/static/media/python.92d04179be1bb07f39a291cf2bf86408.svg",
-    "static/media/sun.svg": "/static/media/sun.79d2c519fd61609875f54271465ff9c7.svg",
+    "static/media/sun.svg": "/static/media/sun.b451528f862eee8f9eb9ffbabe38c45a.svg",
     "static/media/docker.svg": "/static/media/docker.a2eecd96da9f90e20b8dd2c1d09a1fc3.svg",
     "static/media/close.svg": "/static/media/close.52ab0d39b2c514b8322115c951eac5a2.svg",
     "static/media/menu.svg": "/static/media/menu.acf64a387fc724c7a47a3a0120d5dc52.svg",
     "static/media/numpy.svg": "/static/media/numpy.dae34572550edd6bb6a538aa8dd1b465.svg",
-    "static/media/github.svg": "/static/media/github.edc3b24857ff9047ab8032b9a304ab75.svg",
+    "static/media/github.svg": "/static/media/github.1f9116d4ee5e2f617c0e5a996cc5dab1.svg",
     "static/media/pytorch.svg": "/static/media/pytorch.9189bc89c46f3a5c93f3ecbd88127211.svg",
     "static/media/matplotlib.svg": "/static/media/matplotlib.a3a9e876bf96ccd5271110dac8098368.svg",
     "index.html": "/index.html",
     "static/media/git.svg": "/static/media/git.43d387b77657117c0e407816cbf72476.svg",
-    "static/media/linkedin.svg": "/static/media/linkedin.c02cce8e770ae6f8801411933047e2d3.svg",
-    "static/media/moon.svg": "/static/media/moon.7039da165534bad10e90bade04c7174e.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.64234824a3c8995bed0c06092e300bae.svg",
+    "static/media/moon.svg": "/static/media/moon.fdccb44c3bb86085fcaccf8528a0ecaf.svg",
     "static/media/lightning.svg": "/static/media/lightning.288103cd7b52b5fdfc9643b0eb78dc6c.svg",
-    "main.0a00eb9f.css.map": "/static/css/main.0a00eb9f.css.map",
-    "main.2f7b6e13.js.map": "/static/js/main.2f7b6e13.js.map",
+    "main.3daf3d0f.css.map": "/static/css/main.3daf3d0f.css.map",
+    "main.d180a215.js.map": "/static/js/main.d180a215.js.map",
     "651.653b6173.chunk.js.map": "/static/js/651.653b6173.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a00eb9f.css",
-    "static/js/main.2f7b6e13.js"
+    "static/css/main.3daf3d0f.css",
+    "static/js/main.d180a215.js"
   ]
 }
