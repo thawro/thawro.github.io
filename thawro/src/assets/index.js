@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import { ReactComponent as Logo } from "./logo.svg"
 
 import ml_engineer from "./about/ml_engineer.svg";
 import researcher from "./about/researcher.svg";
@@ -38,6 +39,7 @@ import flowers_classification from "./projects/flowers_classification.png"
 
 export {
   logo,
+  Logo,
   python_developer,
   researcher,
   data_scientist,

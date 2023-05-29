@@ -19,7 +19,9 @@ const lightTheme = {
         textPrimary: "black",
         textSecondary: "#5a6ceb",
         textTertiary: "#008E95",
-        textNav: "#ef6029",
+        textNav: "#d6443e",
+
+        // textNav: "#ef6029",
 
 
         backgroundPrimary: "#fff",
@@ -37,7 +39,10 @@ const darkTheme = {
         textPrimary: "#f3f3f3",
         textSecondary: "#5a6ceb",
         textTertiary: "#00c9d4",
-        textNav: "#FB9626",
+        textNav: "#d6443e",
+
+        // textNav: "#FB9626",
+
 
 
         backgroundPrimary: "#222",

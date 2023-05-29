@@ -45,7 +45,7 @@ const Menu = ({ open, setOpen, active, setActive, navLinks, socials, modeSwitche
                         >
                             <span
                                 className="nav-item text-[2rem] font-bold"
-                                sx={{ color: `${active === link.title ? "textSecondary" : "textPrimary"}` }}
+                                sx={{ color: `${active === link.title ? "textNav" : "textPrimary"}` }}
                             >
                                 {link.title}
                             </span>

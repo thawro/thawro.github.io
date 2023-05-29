@@ -24,6 +24,16 @@
   transition: color 0.2s ease,
 }
 
+.scroll-line {
+  height: 3px;
+  width: 0;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
 .container {
   margin: 0 auto;
   margin-top: 0px;
@@ -317,4 +327,9 @@
 
 .contact-button:hover {
   box-shadow: 0px 3px 7px rgba(68, 68, 68, 0.8);
+}
+
+
+.font-gugi {
+  font-family: 'Gugi', cursive;
 }
