@@ -17,8 +17,9 @@ function hexToRgba(hex, alpha) {
 const lightTheme = {
     colors: {
         textPrimary: "black",
-        textSecondary: "#ef6029",
+        textSecondary: "#5a6ceb",
         textTertiary: "#008E95",
+        textNav: "#ef6029",
 
 
         backgroundPrimary: "#fff",
@@ -34,14 +35,16 @@ const lightTheme = {
 const darkTheme = {
     colors: {
         textPrimary: "#f3f3f3",
-        textSecondary: "#FB9626",
-        textTertiary: "rgba(0, 201, 212, 1.0)",
+        textSecondary: "#5a6ceb",
+        textTertiary: "#00c9d4",
+        textNav: "#FB9626",
+
 
         backgroundPrimary: "#222",
         backgroundSecondary: "#000",
         popupOverlayBackground: 'rgba(128, 128, 128, 0.8)',
 
-        heroLine: "linear-gradient(to bottom, rgba(0, 201, 212, 1.0), rgba(0, 201, 212, 0.0))",
+        heroLine: `linear-gradient(to bottom, ${hexToRgba('#00c9d4', 1)}, ${hexToRgba('#00c9d4', 0)})`,
 
     },
 };

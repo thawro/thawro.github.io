@@ -10,6 +10,7 @@ import PopUpWindow from './PopUpWindow'
 import { useThemeUI } from "theme-ui";
 import { getThemeColor } from "../theme";
 import { HuggingFace } from "../assets";
+import { HiOutlineCreditCard } from "react-icons/hi"
 
 const ProjectInfo = ({ github_name, app_url }) => {
   const markdown_url = `https://raw.githubusercontent.com/thawro/${github_name}/main/INFO.md`
@@ -103,12 +104,12 @@ const ProjectCard = ({ index, project, isDark }) => {
           >
             {description}
           </p>
-          <div className='flex justify-between'>
+          <div className='flex justify-between items-center '>
             <div className='mt-4 flex flex-wrap gap-2'>
               {tags.map((tag, index) => (
                 <p
                   key={tag.name}
-                  className="text-[14px]"
+                  className="text-[14px] rounded-lg p-[2px]"
                   sx={{ color: "textSecondary" }}
                 >
                   #{tag.name}
@@ -169,12 +170,14 @@ const ProjectCard = ({ index, project, isDark }) => {
 
 
 const ProjectCardIcon = ({ isDark }) => {
-  return <div
-    className='min-h-[20px] min-w-[15px] rounded-[4px] border-[1px]'
-    style={{ borderColor: getThemeColor(isDark, "popupOverlayBackground") }}
-    sx={{ background: "backgroundSecondary" }}
-  >
-  </div>
+  return (
+
+    <div
+      className='h-[25px] w-[18px] rounded-[6px] border-[1px]'
+      style={{ borderColor: getThemeColor(isDark, "popupOverlayBackground") }}
+      sx={{ background: "backgroundSecondary" }}
+    >
+    </div>)
 }
 
 
@@ -213,18 +216,30 @@ const Projects = () => {
           and manage projects effectively.
           <br className="mb-[10px]" />
           <p className="flex items-center flex-wrap gap-x-10 gap-y-2">
-            <span className="flex items-center">
+            <span
+              className="flex items-center cursor-default"
+              title="Click on the project card to see the interactive preview with demo included"
+            >
               <ProjectCardIcon isDark={isDark} />
               &nbsp; - interactive preview
             </span>
-            <span className="flex items-center">
+            <span
+              className="flex items-center cursor-default"
+              title="Click on the github icon (bottom right) to open project's github repository"
+            >
               <GitHub
+                id="gh"
                 width={25}
                 height={25}
-                fill={getThemeColor(isDark, "textPrimary")} />
+                fill={getThemeColor(isDark, "textPrimary")}
+
+              />
               &nbsp; - code repository
             </span>
-            <span className="flex items-center">
+            <span
+              className="flex items-center cursor-default"
+              title="Click on the app icon (bottom right) to open demo hosted by HuggingFace"
+            >
               <HuggingFace
                 width={25}
                 height={25}

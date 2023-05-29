@@ -19,15 +19,18 @@ const ModeSwitcher = ({ isDark, toggleTheme }) => {
     height: iconSize,
     className: 'pointer-events-none'
   }
-  return <div onClick={toggleTheme} className='p-2'>
+  return <div
+    onClick={toggleTheme}
+    className='p-2'
+    title={`Switch to ${isDark ? "dark" : "light"} theme`}
+  >
     {isDark ?
       <Sun
-        title="Switch to light theme"
+        className='pointer-events-none'
         {...props}
       /> :
       <Moon
         className='pointer-events-none'
-        title="Switch to dark theme"
         {...props}
       />
     }
@@ -60,7 +63,11 @@ const Navbar = ({ toggleTheme }) => {
             <img
               src={logo}
               // alt="logo"
-              style={{ width: 50, height: 50 }}
+              style={{
+                width: 50,
+                height: 50,
+                fill: getThemeColor(isDark, "textTertiary")
+              }}
             />
             <p
               className={`text-[24px] ml-[10px] font-bold coursor-pointer flex`}
@@ -112,7 +119,7 @@ const Navbar = ({ toggleTheme }) => {
                   onClick={() => setActive(link.title)}
                 >
                   <span
-                    sx={{ color: `${active === link.title ? "textSecondary" : "textPrimary"}` }}
+                    sx={{ color: `${active === link.title ? "textNav" : "textPrimary"}` }}
                     className='nav-item text-[${fontSize}] font-medium'
                   >
                     {link.title}
@@ -139,8 +146,14 @@ const Navbar = ({ toggleTheme }) => {
       </div>
       <style>{`
               .nav-item:hover {
-                color: ${getThemeColor(isDark, "textSecondary")}
+                color: ${getThemeColor(isDark, "textNav")}
               }
+              #linkedin:hover, #github:hover {
+                fill: ${getThemeColor(isDark, "textNav")}
+              }
+              {/* #logo {
+                fill: ${getThemeColor(isDark, "textTertiary")}
+              } */}
       `}</style>
     </header>
   );
