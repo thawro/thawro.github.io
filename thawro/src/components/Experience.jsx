@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
 import 'react-vertical-timeline-component/style.min.css'
-import { styles } from "../styles"
+import SectionHeader from "./SectionHeader";
 import { experiences } from "../constants"
 import { SectionWrapper } from "../hoc"
 import { useThemeUI } from "theme-ui";
@@ -16,7 +16,7 @@ const ExperienceCard = ({ experience, isDark }) => {
         background: getThemeColor(isDark, "backgroundSecondary"),
         color: getThemeColor(isDark, "textPrimary"),
       }}
-      contentArrowStyle={{ borderRight: `7px solid grey` }}
+      contentArrowStyle={{ borderRight: `7px solid gray` }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg, border: '0px' }}
       icon={
@@ -66,20 +66,7 @@ const Experience = () => {
 
   return (
     <>
-      <div>
-        <p
-          className={styles.sectionSubText}
-          sx={{ color: "textPrimary" }}
-        >
-          What I have done so far
-        </p>
-        <h2
-          className={styles.sectionHeadText}
-          sx={{ color: "textTertiary" }}
-        >
-          Work Experience.
-        </h2>
-      </div>
+      <SectionHeader headText={"Work Experience."} subText={"What I have done so far"} />
       <div className="mt-20 flex flex-col">
         <VerticalTimeline
           lineColor={getThemeColor(isDark, "textPrimary")}

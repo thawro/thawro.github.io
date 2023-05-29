@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser'
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-
+import SectionHeader from "./SectionHeader";
 const Contact = () => {
 
   const formRef = useRef()
@@ -54,22 +54,10 @@ const Contact = () => {
 
   return (
     <>
-      <div>
-        <p
-          className={styles.sectionSubText}
-          sx={{ color: "textPrimary" }}
-        >
-          Get in touch
-        </p>
-        <h3
-          className={styles.sectionHeadText}
-          sx={{ color: "textTertiary" }}
-        >
-          Contact.
-        </h3>
-
-      </div>
-
+      <SectionHeader
+        headText={"Contact."}
+        subText={"Get in touch"}
+      />
       <form
         ref={formRef}
         onSubmit={handleSubmit}

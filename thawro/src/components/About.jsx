@@ -5,6 +5,7 @@ import { styles } from '../styles'
 import { services } from '../constants'
 import { SectionWrapper } from '../hoc';
 import { useThemeUI } from "theme-ui";
+import SectionHeader from "./SectionHeader";
 
 
 const ServiceCard = ({ index, title, icon }) => {
@@ -12,7 +13,7 @@ const ServiceCard = ({ index, title, icon }) => {
   var isDark = context.colorMode === "dark"
 
   return (
-    <div className="xs:w-[250px] w-full green-pink-gradient p-[1px] rounded-lg shadowed-card">
+    <div className="lg:w-[30%] md:w-[45%] w-[90%] green-pink-gradient p-[1px] rounded-lg shadowed-card">
       <div
         className='rounded-lg py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
         sx={{ backgroundColor: "backgroundSecondary" }}
@@ -40,16 +41,7 @@ const About = () => {
 
   return (
     <div id="about">
-      <p
-        className="sm:text-[18px] text-[14px] uppercase tracking-wider"
-        sx={{ color: "textPrimary" }}
-      >
-        Introduction</p>
-      <h2
-        className={styles.sectionHeadText}
-        sx={{ color: "textTertiary" }}
-      >
-        Overview.</h2>
+      <SectionHeader headText={"Overview."} subText={"Introduction"} />
       <div
         className='mt-4 text-[17px] max-w-3xl leading-[30px]'
         sx={{ color: "textPrimary" }}

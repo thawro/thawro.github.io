@@ -1,7 +1,6 @@
 import React, { Suspense, useState, useEffect } from "react";
 /** @jsxImportSource theme-ui */
 
-import { styles } from '../styles'
 import { SectionWrapper } from '../hoc'
 import { projects } from '../constants'
 import Markdown from './Markdown'
@@ -10,7 +9,8 @@ import PopUpWindow from './PopUpWindow'
 import { useThemeUI } from "theme-ui";
 import { getThemeColor } from "../theme";
 import { HuggingFace } from "../assets";
-import { HiOutlineCreditCard } from "react-icons/hi"
+import SectionHeader from './SectionHeader'
+
 
 const ProjectInfo = ({ github_name, app_url }) => {
   const markdown_url = `https://raw.githubusercontent.com/thawro/${github_name}/main/INFO.md`
@@ -78,9 +78,9 @@ const ProjectCard = ({ index, project, isDark }) => {
     }
   ]
   return (
-    <div id={`project-${index}`} className=" rounded-3xl project-card lg:w-[30%] md:w-[45%]">
+    <div id={`project-${index}`} className=" rounded-3xl project-card lg:w-[30%] md:w-[45%] w-[90%]">
       <div
-        className='cursor-pointer rounded-3xl border-[1px]'
+        className='cursor-pointer h-full rounded-3xl border-[1px] flex flex-col'
         onClick={(openModal)}
         style={{ borderColor: getThemeColor(isDark, "popupOverlayBackground") }}
         sx={{ background: "backgroundSecondary" }}
@@ -90,55 +90,58 @@ const ProjectCard = ({ index, project, isDark }) => {
           alt={image}
           className='object-cover rounded-t-3xl'
         />
+        <div className="grid flex-col flex-1 p-3 ">
+          <div>
+            <h3
+              className='font-bold text-[20px]'
+              sx={{ color: "textPrimary" }}
+            >
+              {name}
+            </h3>
+            <p
+              className='mt-2 text-[14px]'
+              sx={{ color: "textPrimary" }}
+            >
+              {description}
+            </p>
+          </div>
+          <div className="pt-3 mt-auto flex-1">
+            <div className='flex justify-between items-center '>
+              <ul className='flex flex-wrap gap-2'>
+                {tags.map((tag, index) => (
+                  <li
+                    key={tag.name}
+                    className="text-[14px] rounded-lg p-[2px]"
+                    sx={{ color: "textSecondary" }}
+                  >
+                    #{tag.name}
+                  </li>
+                ))}
+              </ul>
+              <div className='inset-0 flex justify-end mt-auto'>
+                {urls.map((url, index) => (
+                  <a
+                    key={`url-${index}`}
+                    href={url.url}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      window.open(url.url, "_blank")
+                      e.stopPropagation()
+                    }}
+                    className='glass mx-1 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                    // sx={{ borderColor: "backgroundPrimary" }}
+                    style={{
+                      backgroundImage: `linear-gradient(to right, rgba(${rgb}, 0.15), rgba(${rgb}, 0.4), rgba(${rgb}, 0.15))`
+                    }}
+                  >
+                    <url.icon
+                      className='w-[70%] h-[70%] object-contain pointer-events-none'
+                      fill={getThemeColor(isDark, "textPrimary")}
+                    />
+                  </a>
+                ))}
 
-        <div className={`p-3`}>
-          <h3
-            className='font-bold text-[24px]'
-            sx={{ color: "textPrimary" }}
-          >
-            {name}
-          </h3>
-          <p
-            className='mt-2 text-[14px]'
-            sx={{ color: "textPrimary" }}
-          >
-            {description}
-          </p>
-          <div className='flex justify-between items-center '>
-            <div className='mt-4 flex flex-wrap gap-2'>
-              {tags.map((tag, index) => (
-                <p
-                  key={tag.name}
-                  className="text-[14px] rounded-lg p-[2px]"
-                  sx={{ color: "textSecondary" }}
-                >
-                  #{tag.name}
-                </p>
-              ))}
-            </div>
-            <div className='inset-0 flex justify-end m-3'>
-              {urls.map((url, index) => (
-                <a
-                  key={`url-${index}`}
-                  href={url.url}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    window.open(url.url, "_blank")
-                    e.stopPropagation()
-                  }}
-                  className='glass mx-1 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-                  // sx={{ borderColor: "backgroundPrimary" }}
-                  style={{
-                    backgroundImage: `linear-gradient(to right, rgba(${rgb}, 0.15), rgba(${rgb}, 0.4), rgba(${rgb}, 0.15))`
-                  }}
-                >
-                  <url.icon
-                    className='w-[70%] h-[70%] object-contain pointer-events-none'
-                    fill={getThemeColor(isDark, "textPrimary")}
-                  />
-                </a>
-              ))}
-
+              </div>
             </div>
           </div>
         </div>
@@ -190,20 +193,10 @@ const Projects = () => {
 
   return (
     <>
-      <div>
-        <p
-          className={styles.sectionSubText}
-          sx={{ color: "textPrimary" }}
-        >
-          My work
-        </p>
-        <h2
-          className={styles.sectionHeadText}
-          sx={{ color: "textTertiary" }}
-        >
-          Projects.
-        </h2>
-      </div>
+      <SectionHeader
+        headText={"Projects."}
+        subText={"My work"}
+      />
       <div className='w-full flex'>
         <p
           className='mt-3 text-[17px] max-w-3xl leading-[30px]'

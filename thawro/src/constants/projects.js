@@ -28,7 +28,7 @@ const projects = [
         app_icon: HuggingFace
     },
     {
-        name: "Flowers classification",
+        name: "Image classification playground",
         description:
             "Classification of 102 flower species using CNN.",
         image: flowers_classification,

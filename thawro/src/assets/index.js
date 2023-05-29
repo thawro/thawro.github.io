@@ -26,6 +26,8 @@ import seaborn from "./tech/seaborn.svg";
 import mlflow from "./tech/mlflow.svg";
 import numpy from "./tech/numpy.svg";
 import wandb from "./tech/wandb.svg";
+// import wandb from "./tech/wandb_light.svg";
+
 
 import { ReactComponent as Sun } from "./sun.svg"
 import { ReactComponent as Moon } from "./moon.svg"
