@@ -56,13 +56,17 @@ const Menu = ({ open, setOpen, active, setActive, navLinks, socials, modeSwitche
                 <li>
                     <ul className='flex flex-row'>
                         {socials.map((url, index) => (
-                            <li className="justify-center p-6 cursor-pointer">
+                            <li
+                                className="justify-center m-4 p-2 cursor-pointer"
+                                onClick={(e) => {
+                                    e.preventDefault()
+                                    window.open(url.url, "_blank")
+                                    e.stopPropagation()
+                                }}
+                            >
                                 <a
                                     key={`social-${index}`}
-                                    onClick={(e) => {
-                                        e.preventDefault()
-                                        window.open(url.url, "_blank")
-                                    }}
+
                                 >
                                     <url.icon
                                         className="cursor-pointer"
@@ -73,7 +77,7 @@ const Menu = ({ open, setOpen, active, setActive, navLinks, socials, modeSwitche
                                 </a>
                             </li>
                         ))}
-                        <li className='justify-center p-6 cursor-pointer'>
+                        <li className='justify-center m-4 cursor-pointer'>
                             {modeSwitcher}
                         </li>
                     </ul>

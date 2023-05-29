@@ -9,6 +9,7 @@ import { GitHub } from "../assets";
 import PopUpWindow from './PopUpWindow'
 import { useThemeUI } from "theme-ui";
 import { getThemeColor } from "../theme";
+import { HuggingFace } from "../assets";
 
 const ProjectInfo = ({ github_name, app_url }) => {
   const markdown_url = `https://raw.githubusercontent.com/thawro/${github_name}/main/INFO.md`
@@ -132,7 +133,7 @@ const ProjectCard = ({ index, project, isDark }) => {
                 >
                   <url.icon
                     className='w-[70%] h-[70%] object-contain pointer-events-none'
-
+                    fill={getThemeColor(isDark, "textPrimary")}
                   />
                 </a>
               ))}
@@ -167,11 +168,22 @@ const ProjectCard = ({ index, project, isDark }) => {
 }
 
 
+const ProjectCardIcon = ({ isDark }) => {
+  return <div
+    className='min-h-[20px] min-w-[15px] rounded-[4px] border-[1px]'
+    style={{ borderColor: getThemeColor(isDark, "popupOverlayBackground") }}
+    sx={{ background: "backgroundSecondary" }}
+  >
+  </div>
+}
+
 
 
 const Projects = () => {
   const context = useThemeUI()
   var isDark = context.colorMode === "dark"
+  var c = isDark ? 255 : 50
+  var rgb = `${c}, ${c}, ${c}`
 
   return (
     <>
@@ -198,10 +210,32 @@ const Projects = () => {
           Each project is briefly described with links to code
           repositories and live demos in it. It reflects my ability
           to solve complex problems, work with different technologies,
-          and manage projects effectively. Click on the project card to see more.
+          and manage projects effectively.
+          <br className="mb-[10px]" />
+          <p className="flex items-center flex-wrap gap-x-10 gap-y-2">
+            <span className="flex items-center">
+              <ProjectCardIcon isDark={isDark} />
+              &nbsp; - interactive preview
+            </span>
+            <span className="flex items-center">
+              <GitHub
+                width={25}
+                height={25}
+                fill={getThemeColor(isDark, "textPrimary")} />
+              &nbsp; - code repository
+            </span>
+            <span className="flex items-center">
+              <HuggingFace
+                width={25}
+                height={25}
+                fill={getThemeColor(isDark, "textPrimary")} />
+              &nbsp; - project demo
+            </span>
+          </p>
+          <br />
         </p>
       </div>
-      <div className='mt-20 flex flex-wrap gap-10 justify-center' id='projects-cards'>
+      <div className='mt-[30px] flex flex-wrap gap-10 justify-center' id='projects-cards'>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} project={project} isDark={isDark} />
         ))}

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-var lineHeight = 5 //px
+var lineHeight = 3 //px
 
 export const StyledBurger = styled.button`
   display: flex;

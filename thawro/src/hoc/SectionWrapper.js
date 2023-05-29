@@ -36,13 +36,13 @@ const SectionWrapper = (Component, idName, useMotion) =>
                         animate={controls}
                         initial="hidden"
                         variants={Variants}
-                        className={`${styles.paddingX} max-w-7xl mx-auto  z-0  mb-[100px]`
+                        className={`container z-0 section`
                         }
                     >
                         < Component />
                     </motion.section>
                     :
-                    <section className={`${styles.paddingX} max-w-7xl mx-auto  z-0 mb-[100px]`}>
+                    <section className={`container z-0 section`}>
                         <Component />
                     </section>}
             </Element>

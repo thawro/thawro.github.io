@@ -18,6 +18,7 @@ const PopUpWindow = ({ isOpen, onClose, children }) => {
     }, [isOpen]);
 
 
+
     const handleOverlayClick = (e) => {
         if (e.target === e.currentTarget) {
             onClose();
@@ -32,9 +33,10 @@ const PopUpWindow = ({ isOpen, onClose, children }) => {
         position: 'fixed',
         top: 0,
         left: 0,
-        transform: `scale(${isOpen ? "1" : "0"})`,
+        display: isOpen ? 'block' : 'none',
         opacity: isOpen ? 1 : 0,
-        animation: `${isOpen ? "openPopUpAnimation" : "closePopUpAnimation"} 1s ease forwards`,
+
+        animation: `${isOpen ? "openPopUpAnimation" : "closePopUpAnimation"} 1s ease`,
         width: '100vw',
         height: '100vh',
         zIndex: 9999,

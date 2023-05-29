@@ -6,6 +6,7 @@ import { StyledBurger } from './Burger.styled';
 
 const Burger = ({ open, setOpen, iconSize }) => {
     const bg = { background: 'textPrimary' }
+    var iconSize = iconSize * 1.3
     return (
         <div
             className={`flex justify-center items-center mr-[8px]`}

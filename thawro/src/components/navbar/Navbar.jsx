@@ -10,8 +10,7 @@ import { useThemeUI } from "theme-ui";
 import Burger from './Burger';
 import Menu from './Menu';
 import { getThemeColor } from '../../theme';
-import SectionWrapper from '../../hoc/SectionWrapper';
-const iconSize = 40
+const iconSize = 30
 
 const ModeSwitcher = ({ isDark, toggleTheme }) => {
   const props = {
@@ -20,7 +19,7 @@ const ModeSwitcher = ({ isDark, toggleTheme }) => {
     height: iconSize,
     className: 'pointer-events-none'
   }
-  return <div onClick={toggleTheme}>
+  return <div onClick={toggleTheme} className='p-2'>
     {isDark ?
       <Sun
         title="Switch to light theme"
@@ -45,14 +44,14 @@ const Navbar = ({ toggleTheme }) => {
 
   return (
     <header
-      className={`px-[15px] py-[10px] w-full flex items-center fixed top-0 z-20`}
+      className={`w-full flex items-center header`}
       sx={{ background: "backgroundPrimary" }}
     >
-      <div className='w-full flex justify-between items-center mx-auto'>
-        <ul className='flex flex-row'>
+      <div className='container  w-full flex justify-between items-center mx-auto'>
+        <ul className='flex flex-row py-[10px] '>
           <Link
             to="/"
-            className='flex items-center cursor-pointer'
+            className='flex items-center cursor-pointer mr-1'
             onClick={() => {
               setActive("");
               window.scrollTo(0, 0)
@@ -60,8 +59,8 @@ const Navbar = ({ toggleTheme }) => {
           >
             <img
               src={logo}
-              alt="logo"
-              className='w-[50px] h-50[px] object-contain'
+              // alt="logo"
+              style={{ width: 50, height: 50 }}
             />
             <p
               className={`text-[24px] ml-[10px] font-bold coursor-pointer flex`}
@@ -71,13 +70,14 @@ const Navbar = ({ toggleTheme }) => {
             </p>
           </Link>
           {socials.map((url, index) => (
-            <li className={`hidden md:flex ml-[${index === 0 ? '10' : '10'}px] mr-[${index === socials.length - 1 ? '0' : '10'}px] cursor-pointer flex items-center`}>
+            <li className={`hidden md:flex ml-1 mr-0 cursor-pointer items-center`}>
               <a
                 key={`social-${index}`}
                 onClick={(e) => {
                   e.preventDefault()
                   window.open(url.url, "_blank")
                 }}
+                className='p-2'
               >
                 <url.icon
                   className="cursor-pointer"

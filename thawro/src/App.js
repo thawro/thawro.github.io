@@ -35,10 +35,8 @@ const App = ({ setTheme }) => {
         className="relative z-0"
         sx={{ background: "backgroundPrimary" }}
       >
-        <div className="bg-cover bg-no-repeat bg-center">
-          <Navbar toggleTheme={toggleTheme} />
-          <Hero />
-        </div>
+        <Navbar toggleTheme={toggleTheme} />
+        <Hero />
         <About />
         <Experience />
         <Tech />
