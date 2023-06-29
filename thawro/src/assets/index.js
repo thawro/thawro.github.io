@@ -38,6 +38,11 @@ import bonasoft from "./company/bonasoft.png";
 import mxlabs from "./company/mxlabs.png";
 
 import flowers_classification from "./projects/flowers_classification.png"
+import image_classification from "./projects/image_classification.png"
+import digits_detection from "./projects/digits_detection.png"
+
+import pdfCV from './hero/Tomasz_Hawro_CV.pdf'
+
 
 export {
   logo,
@@ -63,10 +68,12 @@ export {
   bonasoft,
   mxlabs,
   flowers_classification,
-
+  image_classification,
+  digits_detection,
   HuggingFace,
   GitHub,
   LinkedIn,
   Sun,
-  Moon
+  Moon,
+  pdfCV
 };

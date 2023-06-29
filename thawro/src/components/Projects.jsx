@@ -12,40 +12,43 @@ import { HuggingFace } from "../assets";
 import SectionHeader from './SectionHeader'
 
 
-const ProjectInfo = ({ github_name, app_url }) => {
+const ProjectInfo = ({ github_name, content, demo }) => {
   const markdown_url = `https://raw.githubusercontent.com/thawro/${github_name}/main/INFO.md`
-  const [markdown, setMarkdown] = useState("")
-
-  const handleLoadError = () => {
-    // Handle the error when the external URL is not accessible
-    console.log("Failed to load the web component.");
-    // Perform any necessary actions, such as displaying an error message or taking alternative rendering steps.
-  };
+  const [postContent, setPostContent] = useState("")
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(markdown_url);
         var text = await response.text();
-        setMarkdown(text);
+        setPostContent(<Markdown markdown={text} />);
       } catch (error) {
         console.error('Error downloading the file:', error);
       }
     };
 
-    fetchData();
+    if (content) {
+      setPostContent(content)
+    } else {
+      fetchData();
+    }
   }, [markdown_url]);
+
   return <div>
     <Suspense fallback={null}>
-      <Markdown markdown={markdown} />
-      <hr />
-      <h1
-        className={`lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 text-center`}
-        sx={{ color: "textPrimary" }}
-      >
-        Demo
-      </h1>
-      <gradio-app space={`thawro/${github_name}`} onError={handleLoadError}></gradio-app>
+      {postContent}
+      {demo &&
+        <>
+          <hr />
+          <h1
+            className={`lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 text-center`}
+            sx={{ color: "textPrimary" }}
+          >
+            Demo
+          </h1>
+          {demo}
+        </>
+      }
     </Suspense>
   </div>
 }
@@ -88,7 +91,7 @@ const ProjectCard = ({ index, project, isDark }) => {
         <img
           src={image}
           alt={image}
-          className='object-cover rounded-t-3xl'
+          className='object-cover rounded-t-3xl h-[50%]'
         />
         <div className="grid flex-col flex-1 p-3 ">
           <div>
@@ -110,16 +113,17 @@ const ProjectCard = ({ index, project, isDark }) => {
               <ul className='flex flex-wrap gap-2'>
                 {tags.map((tag, index) => (
                   <li
-                    key={tag.name}
+                    key={tag}
                     className="text-[14px] rounded-lg p-[2px]"
                     sx={{ color: "textSecondary" }}
                   >
-                    #{tag.name}
+                    #{tag}
                   </li>
                 ))}
               </ul>
               <div className='inset-0 flex justify-end mt-auto'>
                 {urls.map((url, index) => (
+                  (url.url !== null) &&
                   <a
                     key={`url-${index}`}
                     href={url.url}
@@ -129,7 +133,6 @@ const ProjectCard = ({ index, project, isDark }) => {
                       e.stopPropagation()
                     }}
                     className='glass mx-1 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-                    // sx={{ borderColor: "backgroundPrimary" }}
                     style={{
                       backgroundImage: `linear-gradient(to right, rgba(${rgb}, 0.15), rgba(${rgb}, 0.4), rgba(${rgb}, 0.15))`
                     }}
@@ -139,6 +142,7 @@ const ProjectCard = ({ index, project, isDark }) => {
                       fill={getThemeColor(isDark, "textPrimary")}
                     />
                   </a>
+
                 ))}
 
               </div>
@@ -155,8 +159,7 @@ const ProjectCard = ({ index, project, isDark }) => {
         >
           <ProjectInfo
             key={`project-${index}`}
-            github_name={project.github_name}
-            app_url={project.app_url}
+            {...project}
           />
         </PopUpWindow>
       </div>

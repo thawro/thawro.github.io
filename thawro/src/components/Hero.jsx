@@ -7,6 +7,7 @@ import { styles } from "../styles";
 import { Link } from "react-scroll";
 
 const Hero = () => {
+
   return (
     <div className={`relative w-full h-screen mx-auto`}>
       <div

@@ -6,6 +6,7 @@ import { services } from '../constants'
 import { SectionWrapper } from '../hoc';
 import { useThemeUI } from "theme-ui";
 import SectionHeader from "./SectionHeader";
+import { pdfCV } from "../assets";
 
 
 const ServiceCard = ({ index, title, icon }) => {
@@ -55,7 +56,10 @@ const About = () => {
         knowledge of computer vision models for continued professional growth.
         I feel most comfortable in the role of ML Engineer,
         where I can contribute to both the research involved in model training
-        and the subsequent productisation process.
+        and the subsequent productisation process. You can download my CV
+        <a href={pdfCV} target="_blank" rel="noreferrer">
+          &nbsp; here
+        </a>.
       </div>
       <div className='mt-20 flex flex-wrap gap-10 justify-center'>
         {services.map((service, index) => (

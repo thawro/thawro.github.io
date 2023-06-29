@@ -25,6 +25,7 @@ const Markdown = ({ markdown }) => {
     return <div>
 
         <ReactMarkdown
+            linkTarget="_blank"
             children={markdown}
             remarkPlugins={[remarkGfm]}
             className={style.reactMarkDown}

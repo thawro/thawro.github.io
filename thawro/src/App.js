@@ -29,7 +29,6 @@ const App = ({ setTheme }) => {
 
 
   return (
-    // <ThemeProvider theme={theme}>
     <BrowserRouter>
       <div
         className="relative z-0"
@@ -48,7 +47,6 @@ const App = ({ setTheme }) => {
 
       </div>
     </BrowserRouter>
-    // </ThemeProvider>
   );
 }
 

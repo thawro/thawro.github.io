@@ -333,3 +333,15 @@
 .font-gugi {
   font-family: 'Gugi', cursive;
 }
+
+iframe {
+  /* position: fixed; */
+  background: #000;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.cv {
+  text-align: end;
+}
