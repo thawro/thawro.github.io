@@ -40,7 +40,7 @@ const App = ({ setTheme }) => {
         <Experience />
         <Tech />
         <Projects />
-        {/* <Feedbacks /> */}
+        <Feedbacks />
         <Contact />
 
         <Footer />

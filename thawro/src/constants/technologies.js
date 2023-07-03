@@ -11,6 +11,10 @@ import {
     matplotlib,
     git,
     docker,
+    react,
+    javascript,
+    onnx,
+    dvc
 } from "../assets";
 
 const technologies = [
@@ -27,6 +31,11 @@ const technologies = [
     {
         name: <>PyTorch<br />Lightning</>,
         icon: lightning,
+        color: "textPrimary",
+    },
+    {
+        name: "ONNX",
+        icon: onnx,
         color: "textPrimary",
     },
     {
@@ -60,6 +69,11 @@ const technologies = [
         color: "textPrimary",
     },
     {
+        name: "DVC",
+        icon: dvc,
+        color: "textPrimary",
+    },
+    {
         name: "seaborn",
         icon: seaborn,
         color: "textPrimary",
@@ -72,6 +86,16 @@ const technologies = [
     {
         name: "scikit-learn",
         icon: sklearn,
+        color: "textPrimary",
+    },
+    {
+        name: "React",
+        icon: react,
+        color: "textPrimary",
+    },
+    {
+        name: "JavaScript",
+        icon: javascript,
         color: "textPrimary",
     },
 ];

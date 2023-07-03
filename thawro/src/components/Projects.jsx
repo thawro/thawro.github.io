@@ -81,7 +81,7 @@ const ProjectCard = ({ index, project, isDark }) => {
     }
   ]
   return (
-    <div id={`project-${index}`} className=" rounded-3xl project-card lg:w-[30%] md:w-[45%] w-[90%]">
+    <div id={`project-${index}`} className="rounded-3xl project-card lg:w-[30%] md:w-[45%] w-[90%]">
       <div
         className='cursor-pointer h-full rounded-3xl border-[1px] flex flex-col'
         onClick={(openModal)}

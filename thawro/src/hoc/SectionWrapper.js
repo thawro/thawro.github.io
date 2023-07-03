@@ -1,4 +1,3 @@
-import { styles } from "../styles";
 import React, { useEffect } from 'react'
 import { Element } from "react-scroll";
 

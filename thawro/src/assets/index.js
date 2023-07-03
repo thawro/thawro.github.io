@@ -26,6 +26,13 @@ import seaborn from "./tech/seaborn.svg";
 import mlflow from "./tech/mlflow.svg";
 import numpy from "./tech/numpy.svg";
 import wandb from "./tech/wandb.svg";
+
+import react from "./tech/react.svg";
+import javascript from "./tech/javascript.svg";
+import onnx from "./tech/onnx.svg";
+import dvc from "./tech/dvc.svg";
+
+
 // import wandb from "./tech/wandb_light.svg";
 
 
@@ -75,5 +82,9 @@ export {
   LinkedIn,
   Sun,
   Moon,
-  pdfCV
+  pdfCV,
+  react,
+  javascript,
+  onnx,
+  dvc
 };
