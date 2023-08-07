@@ -1,6 +1,7 @@
 import {
     bonasoft,
-    mxlabs
+    mxlabs,
+    vestigit
 } from "../assets";
 
 
@@ -29,6 +30,16 @@ const experiences = [
             <>Implementation of multimodal Deep Neural Networks for blood pressure estimation (modalities: bio signals, face video, metadata)</>,
             <>Implementation of lightweight CNN architectures for metadata extraction based on the face image</>,
             <>Models productization - from PyTorch research phase to ONNX model applicable in C++</>
+        ],
+    },
+    {
+        title: "Artificial Intelligence Engineer",
+        company_name: "Vestigit",
+        icon: vestigit,
+        iconBg: "#000000",
+        date: "July 2023 - Present",
+        points: [
+            <>Versatile research on classical and DL approaches for efficient saliency map estimation and DL-based watermarking solutions</>,
         ],
     },
 ];

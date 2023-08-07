@@ -56,7 +56,7 @@ const About = () => {
         knowledge of computer vision models for continued professional growth.
         I feel most comfortable in the role of ML Engineer,
         where I can contribute to both the research involved in model training
-        and the subsequent productisation process. You can download my CV
+        and the subsequent productization process. You can download my CV
         <a href={pdfCV} target="_blank" rel="noreferrer">
           &nbsp; here
         </a>.

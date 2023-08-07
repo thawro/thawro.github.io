@@ -13,13 +13,18 @@ import SectionHeader from './SectionHeader'
 
 
 const ProjectInfo = ({ github_name, content, demo }) => {
-  const markdown_url = `https://raw.githubusercontent.com/thawro/${github_name}/main/INFO.md`
+  const markdown_main_url = `https://raw.githubusercontent.com/thawro/${github_name}/main/INFO.md`
+  const markdown_master_url = `https://raw.githubusercontent.com/thawro/${github_name}/master/INFO.md`
+
   const [postContent, setPostContent] = useState("")
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(markdown_url);
+        var response = await fetch(markdown_main_url);
+        if (~response.ok){
+          response = await fetch(markdown_master_url);
+        }
         var text = await response.text();
         setPostContent(<Markdown markdown={text} />);
       } catch (error) {
@@ -32,7 +37,7 @@ const ProjectInfo = ({ github_name, content, demo }) => {
     } else {
       fetchData();
     }
-  }, [markdown_url]);
+  }, [markdown_main_url, markdown_master_url]);
 
   return <div>
     <Suspense fallback={null}>

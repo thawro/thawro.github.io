@@ -43,10 +43,13 @@ import { ReactComponent as Moon } from "./moon.svg"
 
 import bonasoft from "./company/bonasoft.png";
 import mxlabs from "./company/mxlabs.png";
+import vestigit from "./company/vestigit.png"
+
 
 import flowers_classification from "./projects/flowers_classification.png"
 import image_classification from "./projects/image_classification.png"
 import digits_detection from "./projects/digits_detection.png"
+import yolo from "./projects/yolo.jpg"
 
 import pdfCV from './hero/Tomasz_Hawro_CV.pdf'
 
@@ -86,5 +89,7 @@ export {
   react,
   javascript,
   onnx,
-  dvc
+  dvc,
+  yolo,
+  vestigit
 };

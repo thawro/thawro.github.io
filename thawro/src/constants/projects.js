@@ -1,9 +1,10 @@
-import { imageClassificationPlayground, flowersClassification, digitsDetection } from "./projectsContent";
+import { imageClassificationPlayground, flowersClassification, yolov8DigitsDetection, yolov1FromScratch } from "./projectsContent";
 
 const projects = [
     imageClassificationPlayground,
     flowersClassification,
-    digitsDetection,
+    yolov8DigitsDetection,
+    yolov1FromScratch
 ];
 
 export default projects

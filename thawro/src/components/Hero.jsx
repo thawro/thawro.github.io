@@ -35,13 +35,10 @@ const Hero = () => {
             className={`${styles.heroSubText} mt-2`}
             sx={{ color: "textPrimary" }}
           >
-            I develop Machine Learning models for various tasks.
+            I develop clean, efficient and reproducible code <br/>for Machine Learning projects.
           </p>
         </div>
       </div>
-
-
-      {/* <NeuralNetwork /> */}
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <Link

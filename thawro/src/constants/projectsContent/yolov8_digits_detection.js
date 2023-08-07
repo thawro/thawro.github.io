@@ -3,7 +3,7 @@ import {
     digits_detection
 } from "../../assets";
 
-const digitsDetection = {
+const yolov8DigitsDetection = {
     name: "YOLOv8 digits detection",
     description:
         "Handwritten digits detection using a YOLOv8 model trained on a custom dataset",
@@ -21,4 +21,4 @@ const digitsDetection = {
     </div>
 }
 
-export default digitsDetection
+export default yolov8DigitsDetection
