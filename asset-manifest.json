@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.9b6f1cc7.css",
-    "main.js": "/static/js/main.ffbc9f71.js",
+    "main.js": "/static/js/main.77b315b5.js",
     "static/js/651.653b6173.chunk.js": "/static/js/651.653b6173.chunk.js",
     "static/media/image_classification.png": "/static/media/image_classification.6c44071946295c7c965f.png",
     "static/media/flowers_classification.png": "/static/media/flowers_classification.990e40784cc9739f5a80.png",
@@ -40,11 +40,11 @@
     "static/media/react.svg": "/static/media/react.928f956d9c8ebcffb98a8e917154a81a.svg",
     "static/media/lightning.svg": "/static/media/lightning.288103cd7b52b5fdfc9643b0eb78dc6c.svg",
     "main.9b6f1cc7.css.map": "/static/css/main.9b6f1cc7.css.map",
-    "main.ffbc9f71.js.map": "/static/js/main.ffbc9f71.js.map",
+    "main.77b315b5.js.map": "/static/js/main.77b315b5.js.map",
     "651.653b6173.chunk.js.map": "/static/js/651.653b6173.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9b6f1cc7.css",
-    "static/js/main.ffbc9f71.js"
+    "static/js/main.77b315b5.js"
   ]
 }
