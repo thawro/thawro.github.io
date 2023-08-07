@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.0d59e50c.css",
-    "main.js": "/static/js/main.45730992.js",
+    "main.css": "/static/css/main.9b6f1cc7.css",
+    "main.js": "/static/js/main.ffbc9f71.js",
     "static/js/651.653b6173.chunk.js": "/static/js/651.653b6173.chunk.js",
     "static/media/image_classification.png": "/static/media/image_classification.6c44071946295c7c965f.png",
     "static/media/flowers_classification.png": "/static/media/flowers_classification.990e40784cc9739f5a80.png",
-    "static/media/Tomasz_Hawro_CV.pdf": "/static/media/Tomasz_Hawro_CV.be3901c25b2d80df8037.pdf",
+    "static/media/Tomasz_Hawro_CV.pdf": "/static/media/Tomasz_Hawro_CV.8fd165f098cddfc09d45.pdf",
+    "static/media/yolo.jpg": "/static/media/yolo.68211c991e8d7e1ac698.jpg",
     "static/media/hugging_face.svg": "/static/media/hugging_face.e593e21fb1c5d324805c21027252fe50.svg",
     "static/media/digits_detection.png": "/static/media/digits_detection.092edc313f673b35ac5b.png",
+    "static/media/vestigit.png": "/static/media/vestigit.37bb5d389843374038bf.png",
     "static/media/bonasoft.png": "/static/media/bonasoft.ffef4b2782307c34f9fa.png",
     "static/media/researcher.svg": "/static/media/researcher.fba510970d99b830aee5966a20e19f5e.svg",
     "static/media/data_scientist.svg": "/static/media/data_scientist.bf625937997cbb90b3503f7c2f773e77.svg",
@@ -16,7 +18,9 @@
     "static/media/python_developer.svg": "/static/media/python_developer.eef81261dfbfe5efe8587b42fc1050d3.svg",
     "static/media/sklearn.svg": "/static/media/sklearn.58019548995fd625095879818e7005d2.svg",
     "static/media/plotly.svg": "/static/media/plotly.ffa6cc659a4cab7a224e27300d106e4c.svg",
+    "static/media/onnx.svg": "/static/media/onnx.c554d15962342221f6f55fb29cd2c691.svg",
     "static/media/logo.svg": "/static/media/logo.1c8f4fc3ea21c99d997b268bf66ba786.svg",
+    "static/media/dvc.svg": "/static/media/dvc.327c68f942f43a5e63e1b0b13c4c75a1.svg",
     "static/media/wandb.svg": "/static/media/wandb.d127d4da15aca85bba34d0002429ab32.svg",
     "static/media/mlflow.svg": "/static/media/mlflow.45e0f5f486f1f2e3dba9e2540f279211.svg",
     "static/media/python.svg": "/static/media/python.92d04179be1bb07f39a291cf2bf86408.svg",
@@ -30,15 +34,17 @@
     "static/media/pytorch.svg": "/static/media/pytorch.9189bc89c46f3a5c93f3ecbd88127211.svg",
     "static/media/matplotlib.svg": "/static/media/matplotlib.a3a9e876bf96ccd5271110dac8098368.svg",
     "static/media/git.svg": "/static/media/git.43d387b77657117c0e407816cbf72476.svg",
+    "static/media/javascript.svg": "/static/media/javascript.acc4642f682cd93a4c20a8a02c0cfa21.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.64234824a3c8995bed0c06092e300bae.svg",
     "static/media/moon.svg": "/static/media/moon.fdccb44c3bb86085fcaccf8528a0ecaf.svg",
+    "static/media/react.svg": "/static/media/react.928f956d9c8ebcffb98a8e917154a81a.svg",
     "static/media/lightning.svg": "/static/media/lightning.288103cd7b52b5fdfc9643b0eb78dc6c.svg",
-    "main.0d59e50c.css.map": "/static/css/main.0d59e50c.css.map",
-    "main.45730992.js.map": "/static/js/main.45730992.js.map",
+    "main.9b6f1cc7.css.map": "/static/css/main.9b6f1cc7.css.map",
+    "main.ffbc9f71.js.map": "/static/js/main.ffbc9f71.js.map",
     "651.653b6173.chunk.js.map": "/static/js/651.653b6173.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d59e50c.css",
-    "static/js/main.45730992.js"
+    "static/css/main.9b6f1cc7.css",
+    "static/js/main.ffbc9f71.js"
   ]
 }
