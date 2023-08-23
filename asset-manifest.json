@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.9b6f1cc7.css",
-    "main.js": "/static/js/main.77b315b5.js",
+    "main.js": "/static/js/main.6b11057c.js",
     "static/js/651.653b6173.chunk.js": "/static/js/651.653b6173.chunk.js",
+    "static/media/geda.jpg": "/static/media/geda.9bf687cb38f2e361448a.jpg",
     "static/media/image_classification.png": "/static/media/image_classification.6c44071946295c7c965f.png",
     "static/media/flowers_classification.png": "/static/media/flowers_classification.990e40784cc9739f5a80.png",
-    "static/media/Tomasz_Hawro_CV.pdf": "/static/media/Tomasz_Hawro_CV.8fd165f098cddfc09d45.pdf",
+    "static/media/CV_Tomasz_Hawro.pdf": "/static/media/CV_Tomasz_Hawro.4e919a4571fc38c13019.pdf",
     "static/media/yolo.jpg": "/static/media/yolo.68211c991e8d7e1ac698.jpg",
     "static/media/hugging_face.svg": "/static/media/hugging_face.e593e21fb1c5d324805c21027252fe50.svg",
     "static/media/digits_detection.png": "/static/media/digits_detection.092edc313f673b35ac5b.png",
@@ -40,11 +41,11 @@
     "static/media/react.svg": "/static/media/react.928f956d9c8ebcffb98a8e917154a81a.svg",
     "static/media/lightning.svg": "/static/media/lightning.288103cd7b52b5fdfc9643b0eb78dc6c.svg",
     "main.9b6f1cc7.css.map": "/static/css/main.9b6f1cc7.css.map",
-    "main.77b315b5.js.map": "/static/js/main.77b315b5.js.map",
+    "main.6b11057c.js.map": "/static/js/main.6b11057c.js.map",
     "651.653b6173.chunk.js.map": "/static/js/651.653b6173.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9b6f1cc7.css",
-    "static/js/main.77b315b5.js"
+    "static/js/main.6b11057c.js"
   ]
 }
