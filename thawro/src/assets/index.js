@@ -50,8 +50,9 @@ import flowers_classification from "./projects/flowers_classification.png"
 import image_classification from "./projects/image_classification.png"
 import digits_detection from "./projects/digits_detection.png"
 import yolo from "./projects/yolo.jpg"
+import geda from "./projects/geda.jpg"
 
-import pdfCV from './hero/Tomasz_Hawro_CV.pdf'
+import pdfCV from './hero/CV_Tomasz_Hawro.pdf'
 
 
 export {
@@ -91,5 +92,6 @@ export {
   onnx,
   dvc,
   yolo,
+  geda,
   vestigit
 };

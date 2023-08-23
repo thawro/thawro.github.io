@@ -35,7 +35,7 @@ const Hero = () => {
             className={`${styles.heroSubText} mt-2`}
             sx={{ color: "textPrimary" }}
           >
-            I develop clean, efficient and reproducible code <br/>for Machine Learning projects.
+            I like to implement DL architectures from scratch <br/> and develop clean, efficient and reproducible code <br/>for Machine Learning projects.
           </p>
         </div>
       </div>

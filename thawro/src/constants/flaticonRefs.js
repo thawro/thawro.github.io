@@ -29,6 +29,11 @@ const flaticonRefs = [
         href: "https://icons8.com/icon/HpcvnWPxS15j/moon-symbol",
         title: "",
         text: "Moon Symbol icon by Icons8"
+    },
+    {
+        href: "https://www.freepik.com/free-vector/gradient-website-hosting-illustration_22112055.htm#query=database&position=26&from_view=search&track=sph",
+        title: "",
+        text: "GeDa project image by Freepik"
     }
 ]
 
